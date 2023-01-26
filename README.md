@@ -21,7 +21,8 @@ Software package collecting scripts for the data collection and evaluation of ph
 
 ---
 
-# Requirements
+# Requirements![grafik](https://user-images.githubusercontent.com/123632159/214882584-3f5429e7-2ffa-4efc-8cb1-a30622f945a4.png)
+
   ## Digital Micrograph 3.5X+ with Python support installed
   
   Install the latest version [Digital Micrograph](https://www.gatan.com/installation-instructions) version
@@ -48,11 +49,9 @@ The acquisition of the phase shifting holo image series requires a calibration o
   
   ## Calibrating the tilt
     
-    The direction perpendicular to the biprism orientation is the most sensitive tilt direction. To minimize the coupling from mechanical vibrations into the TEM holder, it is (often) favoarble for the coherence to choose the biprism orientation perpendictlar to the long holder axis. In this special case,the x-direction of the gun tilt lens points along the biprsim. In <mark>TiltSeriesUI.s<mark> the an angle of 0 degree corresponds to the holder axis, so 90 degree is the favorable tilt direction, but the UI allows to tilt in any particular direction, depending on the biprism settings used.
+FFor a given biprism voltage and a certain beam tilt angle the magnitude $\phi$ of the beam tilt in DAC-units has to be calibrated. To minimize the influence of mechanical vibration the biprism should be oriented perpendicular to the holder axis. In the Titan the coordinate system of the beam deflection the y-direction is parallel to the holder axis. The wobbling calibration procedure takes a series of images. The exposure time of each image is synchronized with a tilt-ramp during this exposure. The number of points within the ramp $n$ has to be chosen beforehand. Each image is acquired with a different maximum tilt $\phi_{max}$. The intensity of the acquired wobbling-image can be described as:
     
-    If one tilt angle has been chosen, the magnitude of the tilt has to be calibrated to the used biprism voltage. In our paper we use a medium voltage of 250V, which was sufficient  to seperate the frist order bragg reflections of center- and sideband of platinum, while providing a good visibility of 20%. Goal of the calibration process is to find the beam tilt magnitude in the particular direction, that corresponds to a phase shift of 2PI in the hologram. 
-    
-    
+$$ I_{wobbler}(\phi_{max},n)=$\sum_{i=1}^{n} a(x,y) + b(x,y) \cos \left[ \frac{2\pi x}{Tx} + \frac{2\pi y}{Ty} + \frac{\phi_{max}}{(n-i)}  \right]  $
     
 # Data Evaluation
 
