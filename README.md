@@ -1,6 +1,6 @@
 # Phase-shifting-holography
 
-![/.PaperHeader.png](https://doi.org/10.1016/j.ultramic.2022.113629)
+![Phase Shifting Paper](./PaperHeader.png])
 
 Plaese read (and cite) the Ultramicroscopy publication < paper doi>
 
