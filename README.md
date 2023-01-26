@@ -1,6 +1,6 @@
 # Phase-shifting-holography
 
-![Phase Shifting Paper](./PaperHeader.png])
+![Phase Shifting Paper]()
 
 Plaese read (and cite) the Ultramicroscopy publication < paper doi>
 
@@ -26,10 +26,11 @@ Software package collecting scripts for the data collection and evaluation of ph
 # Requirements
   ## Digital Micrograph 3.5X+ with Python support installed
   
-  Install the latest version DM-Version from: [https://www.gatan.com/installation-instructions]
+  Install the latest version [Digital Micrograph](https://www.gatan.com/installation-instructions) version
   
   ## Software Microscope control to lenses (optional, but strongly recommended)
-  The phase shifting measurement procedure involes a routine to use the GunTilt Lens of the Titan to tilt the beam off from the optical axis to create phase    shifts in the holograms, that are the heart of this method. There is a default option using the Digital Mricorgraph Microscope interface, but with our Microscope this procedure was way too slow and needed approx 1-2 seconds to create one of the beam tilts. Since a phase shifting holo series covers around several tens of images, the specimen driftin the dead time is a serious problem. 
+  The phase shifting measurement procedure involes a routine to use the GunTilt lens of the Titan to tilt the beam off from the optical axis to create phase    shifts in the holograms, that are the heart of this method. There is a [default option]() using the Digital Micrograph Microscope interface, but with our Microscope this procedure was way too slow and needed approx 1-2 seconds to create one of the beam tilts. Since a phase shifting holo series covers around several tens of images, the specimen driftin the dead time is a serious problem. 
+  The phase shifting measurement procedure involes a routine to use the GunTilt lens of the Titan to tilt the beam off from the optical axis to create phase    shifts in the holograms, that are the heart of this method. There is a [default option]() using the Digital Micrograph Microscope interface, but with our Microscope this procedure was way too slow and needed approx 1-2 seconds to create one of the beam tilts. Since a phase shifting holo series covers around several tens of images, the specimen driftin the dead time is a serious problem. 
   
   [Tem scripting interface](https://temscript.readthedocs.io/) or the ability to precompile microscope commands as executable files, that then are included in the measurement script.
   
