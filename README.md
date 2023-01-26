@@ -4,6 +4,14 @@ Plaese read the Ultramicroscopy publication < paper doi>
 
 Software package collecting scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
 
+--- 
+** Table of contents: **
+
+1. [Requiements](#requirements)
+1. [Data Collection](#data-collection)
+1. [Data Evaluation](#data-Evaluation)
+1. [Example Data and Workflow](#Example-Data-and-Workflow)
+
 # Requirements
   ## Digital Micrograph 3.5X+ with Python support installed
   
@@ -17,7 +25,7 @@ Software package collecting scripts for the data collection and evaluation of ph
   
 
 # Data collection
-
+  ## Calibrating the tilt
 # Data Evaluation
 
-# Example Workflow
+# Example Data and Workflow
