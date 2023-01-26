@@ -34,13 +34,22 @@ Software package collecting scripts for the data collection and evaluation of ph
 ---
 # Data collection
 
+The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the <mark>TiltSeriesUI.s<mark>. 
+
+
+    
 ---
   ## Tilt Series UI
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
 </div>
   
+  
+  
   ## Calibrating the tilt
+    
+    The direction perpendicular to the biprism orientation is the most sensitive tilt direction. To minimize the coupling from mechanical vibrations into the TEM holder, it is (often) favoarble for the coherence to choose the biprism orientation perpendictlar to the long holder axis. In this special case, 
+    
 # Data Evaluation
 
  ## Specimen drift correction
