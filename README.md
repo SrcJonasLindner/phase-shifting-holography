@@ -48,7 +48,11 @@ The acquisition of the phase shifting holo image series requires a calibration o
   
   ## Calibrating the tilt
     
-    The direction perpendicular to the biprism orientation is the most sensitive tilt direction. To minimize the coupling from mechanical vibrations into the TEM holder, it is (often) favoarble for the coherence to choose the biprism orientation perpendictlar to the long holder axis. In this special case, 
+    The direction perpendicular to the biprism orientation is the most sensitive tilt direction. To minimize the coupling from mechanical vibrations into the TEM holder, it is (often) favoarble for the coherence to choose the biprism orientation perpendictlar to the long holder axis. In this special case,the x-direction of the gun tilt lens points along the biprsim. In <mark>TiltSeriesUI.s<mark> the an angle of 0 degree corresponds to the holder axis, so 90 degree is the favorable tilt direction, but the UI allows to tilt in any particular direction, depending on the biprism settings used.
+    
+    If one tilt angle has been chosen, the magnitude of the tilt has to be calibrated to the used biprism voltage. In our paper we use a medium voltage of 250V, which was sufficient  to seperate the frist order bragg reflections of center- and sideband of platinum, while providing a good visibility of 20%. Goal of the calibration process is to find the beam tilt magnitude in the particular direction, that corresponds to a phase shift of 2PI in the hologram. 
+    
+    
     
 # Data Evaluation
 
