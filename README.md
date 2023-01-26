@@ -35,7 +35,8 @@ Software package collecting scripts for the data collection and evaluation of ph
 ---
 # Data collection
 
-The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the <mark>TiltSeriesUI.s<mark>. 
+The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the [TiltSeriesUI.s]() Digital Micrograph script.. 
+ 
 ---
   ## Tilt Series UI
     
