@@ -37,8 +37,7 @@ Software package collecting scripts for the data collection and evaluation of ph
 ---
   ## Tilt Series UI
 <div class="content">
-  <img src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
-  <p>Image description</p>
+  <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
 </div>
   
   ## Calibrating the tilt
