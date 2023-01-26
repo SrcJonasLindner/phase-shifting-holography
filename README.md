@@ -1,5 +1,7 @@
 # Phase-shifting-holography
 
+![/.PaperHeader.png](https://doi.org/10.1016/j.ultramic.2022.113629)
+
 Plaese read (and cite) the Ultramicroscopy publication < paper doi>
 
 Software package collecting scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
@@ -8,16 +10,18 @@ Software package collecting scripts for the data collection and evaluation of ph
 **Table of contents:**
 
 1. [Requirements](#requirements)
-1. [Data Collection](#Data-collection) 
-    1.1 [Tilt Series UI](#Tilt-Series-UI) <br>
-    1.1 [Calibrating the tilt](#Calibrating-the-tilt) <br>
-1. [Data Evaluation](#data-Evaluation)
-    1.1 [Specimen drift correction](#specimen-drift-correction)
-    1.1 [Phase shifting series reconstruction](#phase-shifting-series-reconstruction)
-        1.1.1 [Measure the carrier frequency phase](#measure-the-carrier-frequency-phase)
-        1.1.1 [Reoncstruction Matrix](#reconstruction-matrix)
-        1.1.1 [Reconstruction Image](#reconstruction-image)
-1. [Example Data and Workflow](#Example-Data-and-Workflow)
+1. [Data Collection](#data-collection) <br>
+    1. [Tilt Series UI](#tilt-series-ui) <br>
+    1. [Calibrating the tilt](#calibrating-the-tilt)
+1. [Data Evaluation](#data-evaluation)<br>
+    1. [Specimen drift correction](#specimen-drift-correction)<br>
+    1. [Phase shifting series reconstruction](#phase-shifting-series-reconstruction)<br>   
+        1. [Measure the carrier frequency phase](#measure-the-carrier-frequency-phase)<br>
+        1. [Reconstruction Matrix](#reconstruction-matrix)<br>
+        1. [Reconstruction Image](#reconstruction-image)<br>
+1. [Example Data and Workflow](#example-data-and-workflow)<br>
+
+---
 
 # Requirements
   ## Digital Micrograph 3.5X+ with Python support installed
@@ -29,7 +33,7 @@ Software package collecting scripts for the data collection and evaluation of ph
   
   [Tem scripting interface](https://temscript.readthedocs.io/) or the ability to precompile microscope commands as executable files, that then are included in the measurement script.
   
-
+---
 # Data collection
 
 ---
@@ -41,10 +45,10 @@ Software package collecting scripts for the data collection and evaluation of ph
 
  ## Phase shifting series reconstruction
   ### Measure the carrier frequency phase
-  ### Reoncstruction Matrix
+  ### Reconstruction Matrix
   ### Reconstruction Image
 
   ## Reference correction
   
-  
+  ---
 # Example Data and Workflow
