@@ -38,6 +38,27 @@ Software package collecting scripts for the data collection and evaluation of ph
 The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the <mark>TiltSeriesUI.s<mark>. 
 ---
   ## Tilt Series UI
+    
+<details>
+  <summary>Acquire</summary>
+</details>
+
+<details>
+  <summary>Angle [deg]</summary>
+</details>
+    
+<details>
+  <summary>Amplitude [DAC]</summary>
+</details>
+    
+<details>
+  <summary>Options</summary>
+</details>
+    
+<details>
+  <summary>Evaluate</summary>
+</details>    
+    
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
 </div>
@@ -46,14 +67,26 @@ The acquisition of the phase shifting holo image series requires a calibration o
   
   ## Calibrating the tilt
     
-FFor a given biprism voltage and a certain beam tilt angle the magnitude $\phi$ of the beam tilt in DAC-units has to be calibrated. To minimize the influence of mechanical vibration the biprism should be oriented perpendicular to the holder axis. In the Titan the coordinate system of the beam deflection the y-direction is parallel to the holder axis. The wobbling calibration procedure takes a series of images. The exposure time of each image is synchronized with a tilt-ramp during this exposure. The number of points within the ramp $n$ has to be chosen beforehand. Each image is acquired with a different maximum tilt $\phi_{max}$. The intensity of the acquired wobbling-image can be described as:
+FFor a given biprism voltage and a certain beam tilt angle the magnitude $\phi$ of the beam tilt in DAC-units has to be calibrated. To minimize the influence of mechanical vibration the biprism should be oriented perpendicular to the holder axis. In the Titan the coordinate system of the beam deflection the y-direction is parallel to the holder axis. The wobbling calibration procedure takes a series of images. The exposure time of each image is synchronized with a tilt-ramp during this exposure. The number of points within the ramp $n$ (samples) has to be chosen beforehand. Each image is acquired with a different maximum tilt $\phi_{max}$. The intensity of the acquired wobbling-image can be described as:
     
 $$ I_{wobbler}(\phi_{max},n)=\sum_{i=1}^{n} a(x,y) + b(x,y) \cos \left[ \frac{2\pi x}{Tx} + \frac{2\pi y}{Ty} + \frac{\phi_{max}}{(n-i)}  \right]  $$
 
 If the standard derivation of each image is plotted against the $\phi_{max}$ or tilt [DAC] the tilt magnitude needed to create a phase shift of $2\pi n$ can be measured by the distance of maxima of the standard derivative. The standard derivative is maximized if each step corresponds to $\phi_{max}/((n-i))=2\pi m$. This procedure allows a fast way of calibrating the needed tilt for arbitrary biprism orientations and angles and is included in the UI-script.
     
  ```
-    Input Example: 
+    Wobbler-Calibration Input Example (250V biprsim): 
+    
+    Acquire:
+        Samples=4.0
+    Angle [deg]: 
+        Start=90 # choose fix angle along holder axis
+         Stop=0  # do not vary the angle during wobbling
+         Step=0  # do not vary the angle during wobbling
+    Amplitude [DAC]:
+        Start=0.0
+         Stop=25.0
+         Step=1.0
+ press Wobble Button
  ```
    
 # Data Evaluation
