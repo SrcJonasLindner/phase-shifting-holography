@@ -8,8 +8,8 @@ Software package collecting scripts for the data collection and evaluation of ph
 ** Table of contents: **
 
 1. [Requiements](#requirements)
-1. [Data Collection](#data-collection)
-  1.1 Tilt Series UI(#Tilt-series-ui)
+1. [Data Collection](#Data-collection)
+  1.1 Tilt Series UI(#Tilt-Series-UI)
   1.1 Calibrating the tilt(#Calibrating-the-tilt)
 1. [Data Evaluation](#data-Evaluation)
  1.1 [Specimen drift correction](#specimen-drift-correction)
