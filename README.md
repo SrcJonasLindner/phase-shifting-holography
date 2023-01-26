@@ -21,7 +21,7 @@ Software package collecting scripts for the data collection and evaluation of ph
 
 ---
 
-# Requirements![grafik](https://user-images.githubusercontent.com/123632159/214882584-3f5429e7-2ffa-4efc-8cb1-a30622f945a4.png)
+# Requirements
 
   ## Digital Micrograph 3.5X+ with Python support installed
   
@@ -36,9 +36,6 @@ Software package collecting scripts for the data collection and evaluation of ph
 # Data collection
 
 The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the <mark>TiltSeriesUI.s<mark>. 
-
-
-    
 ---
   ## Tilt Series UI
 <div class="content">
@@ -51,7 +48,7 @@ The acquisition of the phase shifting holo image series requires a calibration o
     
 FFor a given biprism voltage and a certain beam tilt angle the magnitude $\phi$ of the beam tilt in DAC-units has to be calibrated. To minimize the influence of mechanical vibration the biprism should be oriented perpendicular to the holder axis. In the Titan the coordinate system of the beam deflection the y-direction is parallel to the holder axis. The wobbling calibration procedure takes a series of images. The exposure time of each image is synchronized with a tilt-ramp during this exposure. The number of points within the ramp $n$ has to be chosen beforehand. Each image is acquired with a different maximum tilt $\phi_{max}$. The intensity of the acquired wobbling-image can be described as:
     
-$$ I_{wobbler}(\phi_{max},n)=$\sum_{i=1}^{n} a(x,y) + b(x,y) \cos \left[ \frac{2\pi x}{Tx} + \frac{2\pi y}{Ty} + \frac{\phi_{max}}{(n-i)}  \right]  $
+$$ I_{wobbler}(\phi_{max},n)=\sum_{i=1}^{n} a(x,y) + b(x,y) \cos \left[ \frac{2\pi x}{Tx} + \frac{2\pi y}{Ty} + \frac{\phi_{max}}{(n-i)}  \right]  $$
     
 # Data Evaluation
 
