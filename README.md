@@ -39,9 +39,13 @@ The acquisition of the phase shifting holo image series requires a calibration o
  
 ---
   ## Tilt Series UI
-    
+ 
 <details>
   <summary>Acquire</summary>
+<kbd>Start</kbd>: <br>
+<kbd>Stop</kbd>:<br>
+<kbd>Ref</kbd>:<br>
+<kbd>Wobble</kbd>:<br>
 </details>
 
 <details>
