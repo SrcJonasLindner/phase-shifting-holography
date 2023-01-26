@@ -9,8 +9,17 @@ Software package collecting scripts for the data collection and evaluation of ph
 
 1. [Requiements](#requirements)
 1. [Data Collection](#data-collection)
-1. [Data Evaluation](#data-Evaluation)
-1. [Example Data and Workflow](#Example-Data-and-Workflow)
+  1.1 Tilt Series UI(#Tilt-series-ui)
+  1.1 Calibrating the tilt(#Calibrating-the-tilt)
+3. [Data Evaluation](#data-Evaluation)
+  
+ 1.1 [Specimen drift correction](#specimen-drift-correction)
+
+ 1.1 [Phase shifting series reconstruction](#phase-shifting-series-reconstruction)
+  1.1.1 [Measure the carrier frequency phase](#measure-the-carrier-frequency-phase)
+  1.1.1 [Reoncstruction Matrix](#reconstruction-matrix)
+  1.1.1 [Reconstruction Image](#reconstruction-image)
+5. [Example Data and Workflow](#Example-Data-and-Workflow)
 
 # Requirements
   ## Digital Micrograph 3.5X+ with Python support installed
@@ -25,7 +34,18 @@ Software package collecting scripts for the data collection and evaluation of ph
   
 
 # Data collection
+  ## Tilt Series UI
   ## Calibrating the tilt
 # Data Evaluation
 
+ ## Specimen drift correction
+
+ ## Phase shifting series reconstruction
+  ### Measure the carrier frequency phase
+  ### Reoncstruction Matrix
+  ### Reconstruction Image
+
+  ## Reference correction
+  
+  
 # Example Data and Workflow
