@@ -39,50 +39,48 @@ The acquisition of the phase shifting holo image series requires a calibration o
  
 ---
   ## Tilt Series UI
-<p> 
+
 <details>
  <summary>Acquire</summary>
  
  <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under <b>Amplitude</b> and <b>Angle</b>  <br>
  <kbd>Stop</kbd>:Cancels the measurement thread.<br>
  <kbd>Ref</kbd>:Defines the zero beam tilt reference lens deflection.<br>
- <kbd>Wobble</kbd>:Starts a Wobbler-calibration measurement. Using  [Amplitude](),  [Angle]() and  [Samples]() <br>
+ <kbd>Wobble</kbd>:Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
  <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
 
 </details>
-</p>
 
-<p>
+
+
 <details>
-  <summary>Angle [deg]<a name="deg>here</a></summary>
+  <summary>Angle [deg]</summary>
  
   
 </details>
- </p>   
+
 <details>
   <summary>Amplitude [DAC]<a name="deg"></a></summary>
   
   
 </details>
-</p>    
+
 <details>
   <summary>Options</summary>
   
   
 </details>
-</p>
 
-<p>
 <details>
   <summary>Evaluate</summary>
 </details>    
-</p>
+
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
 </div>
-</p>
 
-<p>
+
+
 <details>
 <summary>Click this to collapse/fold.</summary>
 
