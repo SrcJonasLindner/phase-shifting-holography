@@ -145,19 +145,54 @@ The main tool for the specimen drift correction is the digital micrograph script
 </div>
 
 <details>
- <summary>Acquire</summary>
+ <summary>Input</summary>
  
- <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under<br>&emsp;&emsp;&emsp; [Amplitude](#tilt-series-ui) and [Angle](#tilt-series-ui).<br>
- <kbd>Stop</kbd>: Cancels the measurement thread.<br>
- <kbd>Ref</kbd>: Saves the current image shift position to jump there to take the vacuum reference after the specimen tilt<br>&emsp;&emsp; series.<br>
- <kbd>Wobble</kbd>: Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
- <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
+ <kbd>Assign</kbd>: .<br>
+ <kbd>Hanning</kbd>: .<br>
 
 </details>
 
+<details>
+ <summary>Aperture</summary>
+ 
+ <kbd>Load</kbd>: .<br>
+ <kbd>Save</kbd>: .<br>
+
+</details>
+
+<details>
+ <summary>Radial masks</summary>
+ 
+ <kbd>Top head</kbd>: .<br>
+ <kbd>B`worth</kbd>: .<br><br>
+ <kbd>Radius</kbd>: .<br><br>
+  
+ <kbd>Positive</kbd>: .<br>
+ <kbd>Negative</kbd>: .<br>
+ <kbd>Blur</kbd>: .<br>
+ <kbd>Undo</kbd>: .<br>
+    
+</details>
+
+<details>
+ <summary>Holography</summary>
+ 
+ <kbd>Sideband</kbd>: .<br>
+ <kbd>Fresnel</kbd>: .<br>
+    
+</details>
 
 
+<details>
+ <summary>Measure</summary>
+ 
+ <kbd>XCF</kbd>: .<br>
+ <kbd>PCF</kbd>: .<br><br>
+ [&check;] Pairwise: <br><br> 
+  <kbd>Max X/kbd>: .<br>
+  <kbd>Max Y/kbd>: .<br>
 
+</details>
 
 
  ## Phase shifting series reconstruction
