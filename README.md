@@ -43,7 +43,7 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <details>
  <summary>Acquire</summary>
  
- <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under <b>Amplitude</b> and <b>Angle</b>  <br>
+ <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under [Amplitude](#tilt-series-ui) and [Angle](#tilt-series-ui)  <br>
  <kbd>Stop</kbd>: Cancels the measurement thread.<br>
  <kbd>Ref</kbd>: Defines the zero beam tilt reference lens deflection.<br>
  <kbd>Wobble</kbd>: Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
@@ -56,17 +56,17 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <details>
   <summary>Angle [deg]</summary>
     
- <kbd>Start</kbd>: <br>
- <kbd>Stop</kbd>:<br>
- <kbd>Stepsize</kbd>:<br>
+ <kbd>Start</kbd>: Inital tilt angle. 90 degree corresponds to the tem holder axis in the FEI Titan.<br>
+ <kbd>Stop</kbd>: Final tilt angle.<br>
+ <kbd>Stepsize</kbd>:Used stepsize if ramping the angle. Set to zeroi for fixed angle measurements.<br>
   
 </details>
 
 <details>
   <summary>Amplitude [DAC]<a name="deg"></a></summary>
     
-  <kbd>Start</kbd>: <br>
- <kbd>Stop/Its.</kbd>: <br>
+  <kbd>Start</kbd>: Initial tilt amplitude in units to the digital to analog converter.  <br>
+ <kbd>Stop/Its.</kbd>:Final tilt magnitude. For typical biprism voltages from 200-300 V [0,40] is a good first wobbbling guess.<br>
  <kbd>Stepsize</kbd>:If stepsize=0: using the stop value as number of measurements to be done. If stepsize>=0 use it to determine the steps between <br>
 &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
   
@@ -88,17 +88,6 @@ The acquisition of the phase shifting holo image series requires a calibration o
 
 
 
-<details>
-<summary>Click this to collapse/fold.</summary>
-
- <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under <b>Amplitude</b> and <b>Angle</b>  <br>
- <kbd>Stop</kbd>:Cancels the measurement thread.<br>
- <kbd>Ref</kbd>:Defines the zero beam tilt reference lens deflection.<br>
- <kbd>Wobble</kbd>:Starts a Wobbler-calibration measurement. Using  [Amplitude](),  [Angle]() and  [Samples]() <br>
- <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
-
-</details>
-</p>
 
 
 
