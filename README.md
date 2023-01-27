@@ -207,19 +207,19 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
  ## Phase shifting series reconstruction
 
 This notation strictly follows the original phase shifting holography reconstruction approach by [Ru et al.](https://doi.org/10.1016/0304-3991(94)90171-6)
-Once a phase shifting hologram series of $n$ images has been aqcuired and the [specimen drift correction](#specimen-drift-correction) has been done, the complex exitwave can be reconstructed from the series $I(n)$. $C_i$ describe complex images, that should be recovert from I(n) by a linear fit process of the cosine function. 
+Once a phase shifting hologram series of $n$ images has been aqcuired and the [specimen drift correction](#specimen-drift-correction) has been done, the complex exitwave can be reconstructed from the series $I(n)$. $C_i$ describe complex images, that should be recovered from I(n) by solving the least squared problem in matrix form. 
  
  $$ I(n) = C_1 + C_2 \exp \[+i \phi_n\] + C_3 \exp \[ -i \phi_n\],$$
  
  This equation can be rewritten in matrix form:
  
- $$(1,exp[ +i \phi_n],exp[-i \phi] ) \left(\begin{array}{c} 
+ $$(1,exp[ +i \phi_n],exp[-i \phi_n] ) \left(\begin{array}{c} 
 C_1\\
 C_2 \\
 C_3
 \end{array}\right) = I(n) $$ 
  
- Multiplying both sides of the equation by $1$, $exp[+i\phi_n]$, and $exp[+-i \phi_n]$ alternatively, and then
+ Multiplying both sides of the equation by $1$, $exp[+i\phi_n]$, and $exp[-i \phi_n]$ alternatively, and then
 summing both sides of the equation over $n$ leads to a $3×3$ matrix expression:
 
 $$\left( \begin{array}{ccc} N & \sum_{n}\exp(+i \phi_n) & \sum_{n}\exp(-i \phi_n)\\
@@ -241,7 +241,7 @@ The complex inverted matrix is needed as input to solve the above matrix equatio
  
   ### Measure the carrier frequency phase
   
- The phase shift of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
+ The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
   
   
   ### Reconstruction Matrix
