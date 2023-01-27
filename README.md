@@ -44,9 +44,9 @@ The acquisition of the phase shifting holo image series requires a calibration o
  <summary>Acquire</summary>
  
  <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under <b>Amplitude</b> and <b>Angle</b>  <br>
- <kbd>Stop</kbd>:Cancels the measurement thread.<br>
- <kbd>Ref</kbd>:Defines the zero beam tilt reference lens deflection.<br>
- <kbd>Wobble</kbd>:Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
+ <kbd>Stop</kbd>: Cancels the measurement thread.<br>
+ <kbd>Ref</kbd>: Defines the zero beam tilt reference lens deflection.<br>
+ <kbd>Wobble</kbd>: Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
  <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
 
 </details>
@@ -68,7 +68,7 @@ The acquisition of the phase shifting holo image series requires a calibration o
   <kbd>Start</kbd>: <br>
  <kbd>Stop/Its.</kbd>: <br>
  <kbd>Stepsize</kbd>:If stepsize=0: using the stop value as number of measurements to be done. If stepsize>=0 use it to determine the steps between <br>
-<kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
+&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
   
 </details>
 
