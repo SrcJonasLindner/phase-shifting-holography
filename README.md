@@ -1,4 +1,4 @@
-# Phase-shifting-holography
+# Phase-shifting-holography software package
 
 [![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2022.113629)
 
@@ -35,7 +35,7 @@ Software package collecting scripts for the data collection and evaluation of ph
 ---
 # Data collection
 
-The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the [TiltSeriesUI.s]() Digital Micrograph script.. 
+The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the [TiltSeriesUI.s]() Digital Micrograph script. 
  
 ---
   ## Tilt Series UI
@@ -77,9 +77,11 @@ The acquisition of the phase shifting holo image series requires a calibration o
 
 <details>
   <summary>Options</summary>
-  [x]: 
-  [x]: 
-  [x]: Reference  
+    
+[&check;] Gun: If checked the gun tilt lens is used via [TEM scripting](https://temscript.readthedocs.io/) compiled executable. <br>&emsp;&emsp;&emsp;&emsp;If unchecked the [EM Commands](http://www.dmscripting.com/tem_control.html) are used. Note that the later may have a long delay. <br>
+[&check;] Pairs: If checked an image is recorded at the zero reference tilt angle after each image in the tilt series. This feature can be used for [π-phase shifting electron holography](https://doi.org/10.1016/j.ultramic.2018.06.004) <br>
+[&check;] Vacuum reference: Acquires <br>
+    
 </details>
 
 <details>
