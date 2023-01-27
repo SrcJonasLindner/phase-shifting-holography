@@ -269,6 +269,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
   
   ### Reconstruction Matrix
   [ReconPS_Holo_Matrix.s]()<br>
+   [ReconPS_Holo_Matrix_with_Fresnel.s]()<br>
   <b>Input:</b> <ul>
   <li>1D image containing the $\phi_n$ of each hologram</li>
 </ul>
@@ -282,7 +283,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
     
 $$I_n(x,y)=a(x,y)+\sum_j b^j(y) \cdot \exp \[\phi_n^j+2\pi i (q_c-q_j )\]$$
     
-The Fourier components are subsequently numbered by $j$. The phase shift of the $j$-th component with the frequency $q_j$ is described by $φ_n^j$ , while $q_c$ describes the hologram carrier frequency.
+The Fourier components are subsequently numbered by $j$. The phase shift of the $j$-th component with the frequency $q_j$ is described by $φ_n^j$ , while $q_c$ describes the hologram carrier frequency. The imatrix to invert has then j×j components.
 This should in principle increase the fit accuracy by giving account to the Fresnel modulations. We decided to not further follow this approach, because the gain in the goodness of fit was small (~3\% $R^2$ gain) compared to the possible risk of overfitting. In our test we used integer fractions of the carrier frequency as Fourier series components, while it may be beneficial to find a proper way to extract them directly from the series or use a theoretical prediction by parametrisation of the Fresnel-modulation for the experimental conditions.
 
    We have implemented the Taylor series reonstruction as digital Micrograph script []().
