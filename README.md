@@ -304,7 +304,7 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
 <li>background constrast image a(x,y) </li>
 <li>fringe constrast image b(x,y) </li>
 <li>phase image $\Phi(x,y)$ </li>
-<li>tilt series model prediction $\hat{I}(n)$ 3D image cube</li>
+<li>tilt series model prediction $\hat{I}(n)$ as 3D image cube</li>
 </ul>
   
   ## Reference correction
