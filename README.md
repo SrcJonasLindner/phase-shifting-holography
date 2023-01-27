@@ -88,8 +88,8 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <details>
   <summary>Evaluate</summary>
     
-<kbd>Drift</kbd>: Uses the [phase correlation function](https://doi.org/10.1016/S0304-3991(02)00071-2) to roughly calculate the specimen drift  of the frontwindow <br>&emsp;&emsp;&emsp;&nbsp;image stack.<br>
-<kbd>Measure stack</kbd>: <br>
+<kbd>Drift</kbd>: Uses the [phase correlation function](https://doi.org/10.1016/S0304-3991(02)00071-2) to roughly calculate the specimen drift  of the<br>&emsp;&emsp;&emsp;&nbsp; frontwindow <br>&emsp;&emsp;&emsp;&nbsp;image stack.<br>
+<kbd>Measure stack</kbd>: Measures the hologram phase of the carrier frequency from the FFT of each hologram inside the frontmost stack. The result is provided as line profile, that is used as input for the [reconstruction](#phase-shifting-series-reconstruction).  <br>
 <kbd>Correct</kbd>: Corrects the tilt series image stack by the drift determined by <kbd>Drift</kbd>.<br>
 <kbd>Refine</kbd>: Beta feature that measures the phase of the holograms by non-linear cosine fitting via python.<br>&emsp;&emsp;&emsp;&nbsp; Not recommended, use <kbd>Measure stack</kbd> insted.<br>
     
@@ -215,9 +215,12 @@ The main tool for the specimen drift correction is the digital micrograph script
 ---
 # Copyright and Disclaimer
 
+<details>
+  <summary>Disclaimer</summary>
+    
 All product and company names are trademarks or registered trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
 
 temscript is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the LICENCE.txt file for any details.
 
 All product and company names are trademarks or registered trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
-
+</details>   
