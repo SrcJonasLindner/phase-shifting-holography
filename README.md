@@ -219,7 +219,7 @@ C_2 \\
 C_3
 \end{array}\right) = I(n) $$ 
  
- Multiplying both sides of the equation by $1$, $exp[+i\phi_n]$, and $exp[-i \phi_n]$ alternatively, and then
+ Multiplying both sides of the equation by $(1, exp[-i\phi_n], exp[+i \phi_n])^T$, and then
 summing both sides of the equation over $n$ leads to a $3×3$ matrix expression:
 
 $$\left( \begin{array}{ccc} N & \sum_{n}\exp(+i \phi_n) & \sum_{n}\exp(-i \phi_n)\\
@@ -240,17 +240,34 @@ The equation can be solved effeciently by  inverting the $3×3$ matrix. This is 
 The complex inverted matrix is needed as input to solve the above matrix equation within the [reconstruction Image](#reconstruction-image) step.
  
   ### Measure the carrier frequency phase
+  [TiltSeriesUI.s]()
+  Input: <li><ul>Phase shifting hologram series as 3D image cube</li></ul>
+  Output: <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
  The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
   
   
   ### Reconstruction Matrix
-  
-  
+  [ReconPS_Holo_Matrix.s]()<br>
+  Input: <ul>
+  <li>1D image containing the $\phi_n$ of each hologram</li>
+</ul>
+  Output: <ul>
+  <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li></ul>
   
   ### Reconstruction Image
+  [ReconPS_Holo_Image.s]()<br>
+  Input: <ul>
+<li>1D image containing the $\phi_n$ of each hologram</li><br>
+<li>Drift corrected 3D image cube containing the phase shifting series</li><br>
+<li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li>
+</ul>
+Output:<ul>
 
+</ul>
+  
   ## Reference correction
+ 
   
   ---
 # Example Data and Workflow
@@ -266,3 +283,4 @@ temscript is distributed in the hope that it will be useful, but WITHOUT ANY WAR
 
 All product and company names are trademarks or registered trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
 </details>   
+ 
