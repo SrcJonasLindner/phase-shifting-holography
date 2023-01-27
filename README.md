@@ -155,8 +155,8 @@ The main tool for the specimen drift correction is the digital micrograph script
 <details>
  <summary>Aperture</summary>
  
- <kbd>Load</kbd>:Assigns frontmost image as working aperture.<br>
- <kbd>Save</kbd>:Saves current working aperture as image.<br>
+ <kbd>Load</kbd>: Assigns frontmost image as working aperture.<br>
+ <kbd>Save</kbd>: Saves current working aperture as image.<br>
 
 </details>
 
