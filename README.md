@@ -166,11 +166,10 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
  <summary>Radial masks</summary>
  
  <kbd>Top-head</kbd>: Applies an top-head mask to working aperture. The radius is given in pixel by <kbd>Radius</kbd><br>
-    
- <kbd>B\`worth</kbd>: Applies a Buttherworth to working aperture. The radius is given in pixel by <kbd>Radius</kbd> and its order is defined by a user dialog.<br>
+ <kbd>B\`worth</kbd>: Applies a Buttherworth to working aperture. The radius is given in pixel by <kbd>Radius</kbd> and its order is defined<br>&emsp;&emsp;&emsp;&emsp; by an user dialog.<br>
  <kbd>Radius</kbd>: . Radius in pixel used for <kbd>Top-head</kbd> and <kbd>B`worth</kbd><br>
- <kbd>Positive</kbd>: Adds a positive spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
- <kbd>Negative</kbd>: Adds a suppresses FFT signal inside the spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
+ <kbd>Positive</kbd>: Adds a positive spot mask at the most intense pixel inside the current ROI. The radius is given via user<br>&emsp;&emsp;&emsp;&emsp; dialog.<br>
+ <kbd>Negative</kbd>: Adds a suppresses FFT signal inside the spot mask at the most intense pixel inside the current ROI.<br>&emsp;&emsp;&emsp;&emsp; The radius is given via user dialog.<br>
  <kbd>Blur</kbd>: Adds Gausssian blur to the edge of an exsiting <kbd>Top-head</kbd> The blur width is given in pixel as user dialog input.<br>
  <kbd>Undo</kbd>: Reverts the last action affecting the working apertue.<br>
     
@@ -206,8 +205,49 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
   
 
  ## Phase shifting series reconstruction
+
+This notation strictly follows the original phase shifting holography reconstruction approach by [Ru et al.](https://doi.org/10.1016/0304-3991(94)90171-6)
+Once a phase shifting hologram series of $n$ images has been aqcuired and the [specimen drift correction](#specimen-drift-correction) has been done, the complex exitwave can be reconstructed from the series $I(n)$. $C_i$ describe complex images, that should be recovert from I(n) by a linear fit process of the cosine function. 
+ 
+ $$ I(n) = C_1 + C_2 \exp \[+i \phi_n\] + C_3 \exp \[ -i \phi_n\],$$
+ 
+ This equation can be rewritten in matrix form:
+ 
+ $$(1,exp[ +i \phi_n],exp[-i \phi] ) \left(\begin{array}{c} 
+C_1\\
+C_2 \\
+C_3
+\end{array}\right) = I(n) $$ 
+ 
+ Multiplying both sides of the equation by $1$, $exp[+i\phi_n]$, and $exp[+-i \phi_n]$ alternatively, and then
+summing both sides of the equation over $n$ leads to a $3×3$ matrix expression:
+
+$$\left( \begin{array}{ccc} N & \sum_{n}\exp(+i \phi_n) & \sum_{n}\exp(-i \phi_n)\\
+\sum_{n} \exp(-i \phi_n) & N & \sum_{n}\exp(-2i \phi_n) \\
+\sum_{n} \exp(+i \phi_n) & \sum_{n}\exp(+2i \phi_n) & N\\
+\end{array} \right)  \left(\begin{array}{c} 
+C_1\\
+C_2 \\
+C_3
+\end{array}\right) = \left(\begin{array}{c} 
+\sum_{n} I(n)\\
+\sum_{n} \exp(-i \phi_n) I(n) \\
+\sum_{n} \exp(+i \phi_n)I(n)
+\end{array}\right) $$ 
+
+The equation can be solved effeciently by  inverting the $3×3$ matrix. This is done in the [reconstruction Matrix](#reconstruction-matrix) section via a digital micrograph script with an embedded python routine.  
+
+The complex inverted matrix is needed as input to solve the above matrix equation within the [reconstruction Image](#reconstruction-image) step.
+ 
   ### Measure the carrier frequency phase
+  
+ The phase shift of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
+  
+  
   ### Reconstruction Matrix
+  
+  
+  
   ### Reconstruction Image
 
   ## Reference correction
