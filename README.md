@@ -55,13 +55,20 @@ The acquisition of the phase shifting holo image series requires a calibration o
 
 <details>
   <summary>Angle [deg]</summary>
- 
+    
+ <kbd>Start</kbd>: <br>
+ <kbd>Stop</kbd>:<br>
+ <kbd>Stepsize</kbd>:<br>
   
 </details>
 
 <details>
   <summary>Amplitude [DAC]<a name="deg"></a></summary>
-  
+    
+  <kbd>Start</kbd>: <br>
+ <kbd>Stop/Its.</kbd>: <br>
+ <kbd>Stepsize</kbd>:If stepsize=0: using the stop value as number of measurements to be done. If stepsize>=0 use it to determine the steps between <br>
+<kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
   
 </details>
 
