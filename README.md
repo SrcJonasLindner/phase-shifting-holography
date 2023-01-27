@@ -277,7 +277,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
   <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li></ul>
   
   <details>
- <summary>Taylor Series insted of cosine fitting</summary>
+ <summary><b>Account for Fresnel modulations</b></summary>
  
  As [Lei et al.](https://doi.org/10.4028/www.scientific.net/MSF.833.215) have shown, in principle the cosine can be replaced by a Taylor series to account for the Fresnel modulation. 
     
@@ -286,7 +286,7 @@ $$I_n(x,y)=a(x,y)+\sum_j b^j(y) \cdot \exp \[\phi_n^j+2\pi i (q_c-q_j )\]$$
 The Fourier components are subsequently numbered by $j$. The phase shift of the $j$-th component with the frequency $q_j$ is described by $φ_n^j$ , while $q_c$ describes the hologram carrier frequency. The imatrix to invert has then $j×j$ components.
 This should in principle increase the fit accuracy by giving account to the Fresnel modulations. We decided to not further follow this approach, because the gain in the goodness of fit was small (~3\% $R^2$ gain) compared to the possible risk of overfitting. In our test we used integer fractions of the carrier frequency as Fourier series components, while it may be beneficial to find a proper way to extract them directly from the series or use a theoretical prediction by parametrisation of the Fresnel-modulation for the experimental conditions.
 
-   We have implemented the Taylor series reonstruction as digital Micrograph script [ReconPS_Holo_Matrix_with_Fresnel.s]().
+We have implemented the Taylor series reonstruction as digital Micrograph script [ReconPS_Holo_Matrix_with_Fresnel.s]().
 
     
 </details>      
