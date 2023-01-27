@@ -140,6 +140,24 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
 The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s]().
 
 
+<div class="content">
+  <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/DriftCorrUI.png">
+</div>
+
+<details>
+ <summary>Acquire</summary>
+ 
+ <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under<br>&emsp;&emsp;&emsp; [Amplitude](#tilt-series-ui) and [Angle](#tilt-series-ui).<br>
+ <kbd>Stop</kbd>: Cancels the measurement thread.<br>
+ <kbd>Ref</kbd>: Saves the current image shift position to jump there to take the vacuum reference after the specimen tilt<br>&emsp;&emsp; series.<br>
+ <kbd>Wobble</kbd>: Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
+ <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
+
+</details>
+
+
+
+
 
 
  ## Phase shifting series reconstruction
