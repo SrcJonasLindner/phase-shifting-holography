@@ -241,29 +241,29 @@ The complex inverted matrix is needed as input to solve the above matrix equatio
  
   ### Measure the carrier frequency phase
   [TiltSeriesUI.s]()<br>
-  Input: <li><ul>Phase shifting hologram series as 3D image cube</li></ul>
-  Output: <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
+  **Input:** <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
+  **Output:** <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
  The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
   
   
   ### Reconstruction Matrix
   [ReconPS_Holo_Matrix.s]()<br>
-  Input: <ul>
+  **Input:** <ul>
   <li>1D image containing the $\phi_n$ of each hologram</li>
 </ul>
-  Output: <ul>
+  **Output:** <ul>
   <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li></ul>
   
   ### Reconstruction Image
   [ReconPS_Holo_Image.s]()<br>
-  Input: <ul>
+**Input:** <ul>
 <li>1D image containing the $\phi_n$ of each hologram</li><br>
 <li>Drift corrected 3D image cube containing the phase shifting series</li><br>
 <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li>
 </ul>
-Output:<ul>
-
+**Output:** <ul>
+<>
 </ul>
   
   ## Reference correction
