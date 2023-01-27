@@ -249,12 +249,22 @@ $$\begin{array}{l}a(x,y) = C_1 \\
 b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 \Phi(x,y)=atan2\left( \frac{Im(C_2)}{Re(C_2)} - (2\pi x)/T_x -(2\pi y)/T_y \right)\end{array}$$
  
+ After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
+ 
+ The goodness of fit $R^2$ can be calculated by [R_sq_adj_from_ReconPS_Holo]() via: 
+ 
+ $$
+ R^2=1-(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  )
+ $$
+ 
+ 
   ### Measure the carrier frequency phase
   [TiltSeriesUI.s]()<br>
   <b>Input:</b> <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
   <b>Output:</b> <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
  The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
+  
   
   
   ### Reconstruction Matrix
@@ -264,6 +274,9 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 </ul>
   <b>Output:</b> <ul>
   <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li></ul>
+  
+  
+  
   
   ### Reconstruction Image
   [ReconPS_Holo_Image.s]()<br>
@@ -277,7 +290,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 <li>background constrast image a(x,y) </li>
 <li>fringe constrast image b(x,y) </li>
 <li>phase image $\Phi(x,y)$ </li>
-<li>model prediction 3D image stack $\hat{I}(n)$ </li>
+<li>tilt series model prediction $\hat{I}(n)$ 3D image stack</li>
 </ul>
   
   ## Reference correction
