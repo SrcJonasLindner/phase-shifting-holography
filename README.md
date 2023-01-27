@@ -241,8 +241,15 @@ The complex inverted matrix is needed as input to solve the above matrix equatio
  
  Within our publication we use the following intensity notation for the series:
  
- $$I(x,y,n) = a(x,y) + b(x,y) \cos\[(2\pi x)/T_x + (2\pi y)/T_y + 4J(x, y) + 4~o(n)]$$
+ $$I(x,y,n) = a(x,y) + b(x,y) \cos\[(2\pi x)/T_x + (2\pi y)/T_y +\Phi + \phi_n  ]$$
  
+ The background contrast a(x,y), the fringe contrast b(x,y) and  the exit-wave phase  $\Phi(x,y)$ are real-images that can be calculated from the complex images $C_i$: 
+ 
+ $$
+ a(x,y) = C_1 \\ 
+ b(x,y) = 2\sqrt{C_1\cdoit C_2} \\
+ \Phi(x,y)=\atan2^{-1}\left( \frac{Im(C_2}{Re(C_2)} - (2\pi x)/T_x -(2\pi y)/T_y \right) 
+ $$
  
   ### Measure the carrier frequency phase
   [TiltSeriesUI.s]()<br>
