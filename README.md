@@ -138,7 +138,7 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
  ## Specimen drift correction
 
 The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s]().
-
+The purpose is to create a custom mask in reciprocal space. This custom mask can constist of combinations of spot- and radial masks to focus the drift correction of the relevant spatial frequencies. After the mask is constructed iwth the user interface it can be applied to the image stack and the drift calculated via cross correaltion or phase correlation function. The drift vector is returned in form of an image, that can be applied to stacks. 
 
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/DriftCorrUI.png">
@@ -177,8 +177,8 @@ The main tool for the specimen drift correction is the digital micrograph script
 <details>
  <summary>Holography</summary>
  
- <kbd>Sideband</kbd>: .<br>
- <kbd>Fresnel</kbd>: .<br>
+ <kbd>Sideband</kbd>: Removes the most intense bragg peaks inside the sideband. The number of peaks to remove is given as user input dialog.<br>
+ <kbd>Fresnel</kbd>: Not fully implemented yet. Should use a gausssian line filter to mask the fresel streak.<br>
     
 </details>
 
