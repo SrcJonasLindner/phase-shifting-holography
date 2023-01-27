@@ -251,10 +251,10 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
- The goodness of fit $R^2$ can be calculated by [R_sq_adj_from_ReconPS_Holo]() via: 
+ The goodness of fit $R^2$ (and the adj. $R^2$) can be calculated by [R_sq_adj_from_ReconPS_Holo]() via: 
  
  $$
- R^2=1-(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  )
+ R^2=1-\left(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  \right)
  $$
  
  
