@@ -137,6 +137,11 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
 
  ## Specimen drift correction
 
+The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s]().
+
+
+
+
  ## Phase shifting series reconstruction
   ### Measure the carrier frequency phase
   ### Reconstruction Matrix
