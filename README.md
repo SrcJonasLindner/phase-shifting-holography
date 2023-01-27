@@ -35,7 +35,7 @@ Software package collecting scripts for the data collection and evaluation of ph
 ---
 # Data collection
 
-The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the [TiltSeriesUI.s]() Digital Micrograph script. 
+The acquisition of the phase shifting holo image series requires a calibration of the magnitude and direction of the beam tilt. Both, calibration and the image series recording are implemented in the [TiltSeriesUI.s]() Digital Micrograph script. An phase shifting holo tilt series should at least cover the phaseshifts in the intervall $\[0,2\pi\]$. Generally choose short exposure time (e.g. one second) to be able to correct the specimen drift via post processing. Aim for 50 holograms in the tilt series to increase the fitting accuracy of the reconstruction and high fringe visibility.
  
 ---
   ## Tilt Series UI
@@ -93,9 +93,8 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <kbd>Correct</kbd>: Corrects the tilt series image stack by the drift determined by <kbd>Drift</kbd>.<br>
 <kbd>Refine</kbd>: Beta feature that measures the phase of the holograms by non-linear cosine fitting via python.<br>&emsp;&emsp;&emsp;&nbsp; Not recommended, use <kbd>Measure stack</kbd> insted.<br>
     
-<kbd>Drift x</kbd>: <br>
-<kbd>Drift y</kbd>: <br>
-<kbd>Phase </kbd>: <br>
+<kbd>Drift x</kbd>: Linear x-drift interpolation according to <kbd>Drift</kbd>. <br>
+<kbd>Drift y</kbd>: Linear y-drift interpolation according to <kbd>Drift</kbd>. <br>
 </details>    
 
 
@@ -130,9 +129,10 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
   <img src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/wobbler_calib2.png">
 </div>
   Standard derivative of wobbler calibration image intensities for number of samples n=[2,3,4] plotted vs maximum tilt magnitude $phi_{max}$. The distance of the maxima scales with n∙2π, therefore the beam tilt amplitude for an arbitrary phase shift can be measured by the distance in the wobbling curve.
-
-  
+    
 </details>
+
+
 # Data Evaluation
 
  ## Specimen drift correction
