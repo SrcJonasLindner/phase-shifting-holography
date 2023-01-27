@@ -277,7 +277,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 <li>background constrast image a(x,y) </li>
 <li>fringe constrast image b(x,y) </li>
 <li>phase image $\Phi(x,y)$ </li>
-<li>model prediction 3D image stack $\\hat{I}(n)$ </li>
+<li>model prediction 3D image stack $\hat{I}(n)$ </li>
 </ul>
   
   ## Reference correction
