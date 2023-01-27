@@ -239,6 +239,11 @@ The equation can be solved effeciently by  inverting the $3×3$ matrix. This is 
 
 The complex inverted matrix is needed as input to solve the above matrix equation within the [reconstruction Image](#reconstruction-image) step.
  
+ Within our publication we use the following intensity notation for the series:
+ 
+ $$I(x,y,n) = a(x,y) + b(x,y) \cos\[(2\pi x)/T_x + (2\pi y)/T_y + 4J(x, y) + 4~o(n)]$$
+ 
+ 
   ### Measure the carrier frequency phase
   [TiltSeriesUI.s]()<br>
   <b>Input:</b> <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
@@ -258,9 +263,10 @@ The complex inverted matrix is needed as input to solve the above matrix equatio
   ### Reconstruction Image
   [ReconPS_Holo_Image.s]()<br>
 <b>Input:</b> <ul>
-<li>1D image containing the $\phi_n$ of each hologram</li><br>
-<li>Drift corrected 3D image cube containing the phase shifting series</li><br>
+<li>1D image containing the $\phi_n$ of each hologram</li>
+<li>Drift corrected 3D image cube containing the phase shifting series</li>
 <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li>
+<li>Two float number $T_x$ $T_y$ the fringe spacing in pixels in x- and y direction</li>    
 </ul>
 <b>Output:</b> <ul>
 <li>test </li>
