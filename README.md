@@ -304,7 +304,7 @@ This should in principle increase the fit accuracy by giving account to the Fres
 <li>background constrast image a(x,y) </li>
 <li>fringe constrast image b(x,y) </li>
 <li>phase image $\Phi(x,y)$ </li>
-<li>tilt series model prediction $\hat{I}(n)$ 3D image stack</li>
+<li>tilt series model prediction $\hat{I}(n)$ 3D image cube</li>
 </ul>
   
   ## Reference correction
