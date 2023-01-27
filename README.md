@@ -80,8 +80,8 @@ The acquisition of the phase shifting holo image series requires a calibration o
     
 <kbd>Calibrate</kbd>: User input of constant factors to scale the tilt magnitudes in x- and y directions<br>&emsp;&emsp;&emsp;&emsp; respectively. Optional after calibration to rescale the used tilt magnitude.<br>    
 [&check;] Gun: If checked the gun tilt lens is used via [TEM scripting](https://temscript.readthedocs.io/) compiled executable. <br>&emsp;&emsp;&emsp;&emsp;If unchecked the [EM Commands](http://www.dmscripting.com/tem_control.html) are used. Note that the later may have a long delay. <br>
-[&check;] Pairs: If checked an image is recorded at the zero reference tilt angle after each image in the tilt series. This feature can be used for [π-phase shifting electron holography](https://doi.org/10.1016/j.ultramic.2018.06.004) <br>
-[&check;] Vacuum reference: If checked a vacuum reference tilt series is acquired at the image shift position defined by <kbd>Ref.</kbd>. The same angle and amplitude parameters are used for the vacuum series.<br>
+[&check;] Pairs: If checked an image is recorded at the zero reference tilt angle after each image in the tilt series. This<br> &emsp;&emsp;&emsp;&emsp;feature can be used for [π-phase shifting electron holography](https://doi.org/10.1016/j.ultramic.2018.06.004) <br>
+[&check;] Vacuum reference: If checked a vacuum reference tilt series is acquired parallel at the image shift position<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; defined by <kbd>Ref.</kbd> The same angle and amplitude parameters are used for the vacuum<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; series. Trades specimen drift vs. biprsim drift compared to sequenctial recording of two seperate stacks.<br>
     
 </details>
 
@@ -91,7 +91,7 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <kbd>Drift</kbd>: Uses the [phase correlation function](https://doi.org/10.1016/S0304-3991(02)00071-2) to roughly calculate the specimen drift  of the frontwindow <br>&emsp;&emsp;&emsp;&nbsp;image stack.<br>
 <kbd>Measure stack</kbd>: <br>
 <kbd>Correct</kbd>: Corrects the tilt series image stack by the drift determined by <kbd>Drift</kbd>.<br>
-<kbd>Refine</kbd>: <br>
+<kbd>Refine</kbd>: Beta feature that measures the phase of the holograms by non-linear cosine fitting via python. Not recommended approach compare to carrier freqency phase determination via FFT.<br>
     
 <kbd>Ref.</kbd>: <br>
 <kbd>Ref.</kbd>: <br>
