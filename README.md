@@ -40,6 +40,10 @@ The acquisition of the phase shifting holo image series requires a calibration o
 ---
   ## Tilt Series UI
 
+<div class="content">
+  <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
+</div>
+
 <details>
  <summary>Acquire</summary>
  
@@ -66,32 +70,30 @@ The acquisition of the phase shifting holo image series requires a calibration o
   <summary>Amplitude [DAC]<a name="deg"></a></summary>
     
   <kbd>Start</kbd>: Initial tilt amplitude in units to the digital to analog converter.  <br>
- <kbd>Stop/Its.</kbd>:Final tilt magnitude. For typical biprism voltages from 200-300 V [0,40] is a good first wobbbling guess.<br>
- <kbd>Stepsize</kbd>:If stepsize=0: using the stop value as number of measurements to be done. If stepsize>=0 use it to determine the steps between <br>
-&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
+ <kbd>Stop/Its.</kbd>:Final tilt magnitude. For typical biprism voltages from 200-300 V [0,40] is a good first wobbbling<br> &emsp;&emsp;&emsp;&emsp; guess.<br>
+ <kbd>Stepsize</kbd>:If stepsize=0: using the stop value as number of measurements to be done. If stepsize>=0 use it to<br>&emsp;&emsp;&emsp;&emsp; determine the steps between <kbd>Start</kbd>and <kbd>Stop</kbd>.<br>
   
 </details>
 
 <details>
   <summary>Options</summary>
-  
-  
+  [x]: 
+  [x]: 
+  [x]: Reference  
 </details>
 
 <details>
   <summary>Evaluate</summary>
 </details>    
 
-<div class="content">
-  <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/TiltSeriesUI.png">
-</div>
 
 
 
 
 
 
-  
+
+  ---
   ## Calibrating the tilt
     
 FFor a given biprism voltage and a certain beam tilt angle the magnitude $\phi$ of the beam tilt in DAC-units has to be calibrated. To minimize the influence of mechanical vibration the biprism should be oriented perpendicular to the holder axis. In the Titan the coordinate system of the beam deflection the y-direction is parallel to the holder axis. The wobbling calibration procedure takes a series of images. The exposure time of each image is synchronized with a tilt-ramp during this exposure. The number of points within the ramp $n$ (samples) has to be chosen beforehand. Each image is acquired with a different maximum tilt $\phi_{max}$. The intensity of the acquired wobbling-image can be described as:
