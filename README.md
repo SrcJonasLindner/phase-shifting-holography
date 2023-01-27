@@ -166,9 +166,9 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
  <summary>Radial masks</summary>
  
  <kbd>Top-head</kbd>: Applies an top-head mask to working aperture. The radius is given in pixel by <kbd>Radius</kbd><br>
- <kbd>B`worth</kbd>: Applies a Buttherworth to working aperture. The radius is given in pixel by <kbd>Radius</kbd> and its order is defined by a user dialog.<br>
+    
+ <kbd>B\`worth</kbd>: Applies a Buttherworth to working aperture. The radius is given in pixel by <kbd>Radius</kbd> and its order is defined by a user dialog.<br>
  <kbd>Radius</kbd>: . Radius in pixel used for <kbd>Top-head</kbd> and <kbd>B`worth</kbd><br>
-  
  <kbd>Positive</kbd>: Adds a positive spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
  <kbd>Negative</kbd>: Adds a suppresses FFT signal inside the spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
  <kbd>Blur</kbd>: Adds Gausssian blur to the edge of an exsiting <kbd>Top-head</kbd> The blur width is given in pixel as user dialog input.<br>
