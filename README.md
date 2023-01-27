@@ -275,7 +275,17 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
   <b>Output:</b> <ul>
   <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li></ul>
   
-  
+  <details>
+ <summary>Taylor Series insted of cosine fitting</summary>
+ 
+ As [Lei et al.](https://doi.org/10.4028/www.scientific.net/MSF.833.215) have shown, in principle the cosine can be replaced by a Taylor series to account for the Fresnel modulation. 
+    
+    $$I_n(x,y)=a(x,y)+\sum_j b^j(y) \cdot \exp \[\phi_n^j+2\pi i (q_c-q_j )\]$$
+    
+    We have implemented the Taylor series reonstruction as digital Micrograph script []().
+
+    
+</details>      
   
   
   ### Reconstruction Image
