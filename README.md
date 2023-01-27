@@ -147,30 +147,30 @@ The main tool for the specimen drift correction is the digital micrograph script
 <details>
  <summary>Input</summary>
  
- <kbd>Assign</kbd>: .<br>
- <kbd>Hanning</kbd>: .<br>
+ <kbd>Assign</kbd>: Assigns the frontwindow image stack to the Userinterface.<br>
+ <kbd>Hanning</kbd>: Apllies a realspace hanning window with radius=0.5* image width/height to the stack center.<br>
 
 </details>
 
 <details>
  <summary>Aperture</summary>
  
- <kbd>Load</kbd>: .<br>
- <kbd>Save</kbd>: .<br>
+ <kbd>Load</kbd>:Assigns frontmost image as working aperture.<br>
+ <kbd>Save</kbd>:Saves current working aperture as image.<br>
 
 </details>
 
 <details>
  <summary>Radial masks</summary>
  
- <kbd>Top head</kbd>: .<br>
- <kbd>B`worth</kbd>: .<br><br>
- <kbd>Radius</kbd>: .<br><br>
+ <kbd>Top-head</kbd>: Applies an top-head mask to working aperture. The radius is given in pixel by <kbd>Radius</kbd><br>
+ <kbd>B`worth</kbd>: Applies a Buttherworth to working aperture. The radius is given in pixel by <kbd>Radius</kbd> and its order is defined by a user dialog.<br>
+ <kbd>Radius</kbd>: . Radius in pixel used for <kbd>Top-head</kbd> and <kbd>B`worth</kbd><br>
   
- <kbd>Positive</kbd>: .<br>
- <kbd>Negative</kbd>: .<br>
- <kbd>Blur</kbd>: .<br>
- <kbd>Undo</kbd>: .<br>
+ <kbd>Positive</kbd>: Adds a positive spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
+ <kbd>Negative</kbd>: Adds a suppresses FFT signal inside the spot mask at the most intense pixel inside the current ROI. The radius is given via user dialog.<br>
+ <kbd>Blur</kbd>: Adds Gausssian blur to the edge of an exsiting <kbd>Top-head</kbd> The blur width is given in pixel as user dialog input.<br>
+ <kbd>Undo</kbd>: Reverts the last action affecting the working apertue.<br>
     
 </details>
 
@@ -189,11 +189,19 @@ The main tool for the specimen drift correction is the digital micrograph script
  <kbd>XCF</kbd>: .<br>
  <kbd>PCF</kbd>: .<br><br>
  [&check;] Pairwise: <br><br> 
-  <kbd>Max X/kbd>: .<br>
-  <kbd>Max Y/kbd>: .<br>
-
+  <kbd>Max X</kbd>: .<br>
+  <kbd>Max Y</kbd>: .<br>
+    
 </details>
 
+<details>
+ <summary>Drift Sequence</summary>
+ 
+ <kbd>Load</kbd>: .<br>
+ <kbd>Apply</kbd>: .<br>
+    
+</details>      
+  
 
  ## Phase shifting series reconstruction
   ### Measure the carrier frequency phase
