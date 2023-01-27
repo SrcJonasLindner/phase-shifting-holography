@@ -240,7 +240,7 @@ The equation can be solved effeciently by  inverting the $3×3$ matrix. This is 
 The complex inverted matrix is needed as input to solve the above matrix equation within the [reconstruction Image](#reconstruction-image) step.
  
   ### Measure the carrier frequency phase
-  [TiltSeriesUI.s]()
+  [TiltSeriesUI.s]()<br>
   Input: <li><ul>Phase shifting hologram series as 3D image cube</li></ul>
   Output: <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
