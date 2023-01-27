@@ -49,7 +49,7 @@ The acquisition of the phase shifting holo image series requires a calibration o
  
  <kbd>Start</kbd>: Starts the recording of the image tilt series. Looping over the amplitude and angle ranges given under [Amplitude](#tilt-series-ui) and [Angle](#tilt-series-ui)  <br>
  <kbd>Stop</kbd>: Cancels the measurement thread.<br>
- <kbd>Ref</kbd>: Defines the zero beam tilt reference lens deflection.<br>
+ <kbd>Ref</kbd>: Saves the current image shift position to jump there to take the vacuum reference after the specimen tilt series.<br>
  <kbd>Wobble</kbd>: Starts a Wobbler-calibration measurement. Using  [Amplitude](#tilt-series-ui),  [Angle](#tilt-series-ui) and  [Samples](#tilt-series-ui) <br>
  <kbd>Samples</kbd>: Defines the number of sample-points within the wobbler amplitude ramp. See [details](#calibrating-the-tilt)
 
@@ -78,21 +78,25 @@ The acquisition of the phase shifting holo image series requires a calibration o
 <details>
   <summary>Options</summary>
     
+<kbd>Calibrate</kbd>: User input of constant factors to scale the tilt magnitudes in x- and y directions<br>&emsp;&emsp;&emsp;&emsp; respectively. Optional after calibration to rescale the used tilt magnitude.<br>    
 [&check;] Gun: If checked the gun tilt lens is used via [TEM scripting](https://temscript.readthedocs.io/) compiled executable. <br>&emsp;&emsp;&emsp;&emsp;If unchecked the [EM Commands](http://www.dmscripting.com/tem_control.html) are used. Note that the later may have a long delay. <br>
 [&check;] Pairs: If checked an image is recorded at the zero reference tilt angle after each image in the tilt series. This feature can be used for [π-phase shifting electron holography](https://doi.org/10.1016/j.ultramic.2018.06.004) <br>
-[&check;] Vacuum reference: Acquires <br>
+[&check;] Vacuum reference: If checked a vacuum reference tilt series is acquired at the image shift position defined by <kbd>Ref.</kbd>. The same angle and amplitude parameters are used for the vacuum series.<br>
     
 </details>
 
 <details>
   <summary>Evaluate</summary>
+    
+<kbd>Drift</kbd>: Uses the [phase correlation function](https://doi.org/10.1016/S0304-3991(02)00071-2) to roughly calculate the specimen drift  of the frontwindow <br>&emsp;&emsp;&emsp;&nbsp;image stack.<br>
+<kbd>Measure stack</kbd>: <br>
+<kbd>Correct</kbd>: Corrects the tilt series image stack by the drift determined by <kbd>Drift</kbd>.<br>
+<kbd>Refine</kbd>: <br>
+    
+<kbd>Ref.</kbd>: <br>
+<kbd>Ref.</kbd>: <br>
+<kbd>Ref.</kbd>: <br>
 </details>    
-
-
-
-
-
-
 
 
   ---
