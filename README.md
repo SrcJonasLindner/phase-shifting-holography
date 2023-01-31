@@ -331,7 +331,7 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
   ---
 # Example Data and Workflow
 
-An example-data of an phase shifting electron holography data set can be downloaded [here](https://data.goettingen-research-online.de/). It include a reference series. Note that the data may be binned by two compared to the publication data.
+An example-data of an phase shifting electron holography data set can be downloaded [here](https://data.goettingen-research-online.de/).  Note that the data may be binned by two compared to the publication data.
 
 Example workflow start: <br>
 
