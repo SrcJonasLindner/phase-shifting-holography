@@ -327,7 +327,6 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
  \end{array}$$
  
  
-  
   ---
 # Example Data and Workflow
 
