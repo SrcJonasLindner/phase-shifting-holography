@@ -207,7 +207,7 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
  ## Phase shifting series reconstruction
 
 This notation strictly follows the original phase shifting holography reconstruction approach by [Ru et al.](https://doi.org/10.1016/0304-3991(94)90171-6)
-Once a phase shifting hologram series of $n$ images has been aqcuired and the [specimen drift correction](#specimen-drift-correction) has been done, the complex exitwave can be reconstructed from the series $I(n)$. $C_i$ describe complex images, that should be recovered from I(n) by solving the least squared problem in matrix form. 
+Once a phase shifting hologram series of $n$ images has been aqcuired and the [specimen drift correction](#specimen-drift-correction) has been done, the complex exitwave can be reconstructed from the series $I(n)$. $C_i$ describe complex images, that should be recovered from $I(n)$ by solving the least squared problem in matrix form. 
  
  $$ I(n) = C_1 + C_2 \exp \[+i \phi_n\] + C_3 \exp \[ -i \phi_n\],$$
  
