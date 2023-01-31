@@ -267,15 +267,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  $$
  R^2=1-\left(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  \right)
  $$
- 
- Amplitude $A(x,y)$ and phase $\Phi(x,y)$ of the exit wavefunction with respect to the reference can be calculated by<br>
- 
- $$\begin{array}{l}
- \text{A}(x,y) = \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
-\Phi(x,y)= \tan^{-1}⁡\left( \Phi(x,y)-\Phi_{ref}(x,y)\right)
- \end{array}$$
- 
- 
+
   ### Measure the carrier frequency phase
   [TiltSeriesUI.s]()<br>
   <b>Input:</b> <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
@@ -326,6 +318,14 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
 </ul>
   
   ## Reference correction
+ 
+ Amplitude $A(x,y)$ and phase $\Phi(x,y)$ of the exit wavefunction with respect to the reference can be calculated from the reconstructed images by<br>
+ 
+ $$\begin{array}{l}
+ \text{A}(x,y) = \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
+\Phi(x,y)= \tan^{-1}⁡\left( \Phi(x,y)-\Phi_{ref}(x,y)\right)
+ \end{array}$$
+ 
  
   
   ---
