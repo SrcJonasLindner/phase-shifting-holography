@@ -235,9 +235,21 @@ C_3
 \sum_{n} \exp(+i \phi_n)I(n)
 \end{array}\right) $$ 
 
-The equation can be solved effeciently by  inverting the $3×3$ matrix. This is done in the [reconstruction Matrix](#reconstruction-matrix) section via a digital micrograph script with an embedded python routine.  
+The equation can be solved effeciently by  inverting the $3×3$ matrix $\underline{\underline{M}}$. 
 
-The complex inverted matrix is needed as input to solve the above matrix equation within the [reconstruction Image](#reconstruction-image) step.
+$$\left(\begin{array}{c} 
+C_1\\
+C_2 \\
+C_3
+\end{array}\right) = \underline{\underline{M}}^{-1} \cdot \left(\begin{array}{c} 
+v_1\\
+v_2 \\
+v_3
+\end{array}\right)  $$
+
+Calculating $\underline{\underline{M}}^{-1}$ is done in the [reconstruction Matrix](#reconstruction-matrix) section via a digital micrograph script with an embedded python routine.  
+
+The complex inverted matrix is needed as input to solve the above matrix equation by calculating $$\underline{\underline{M}}^{-1}\cdo\vec{v}$ within the [reconstruction Image](#reconstruction-image) step.
  
  Within our publication we use the following intensity notation for the series:
  
@@ -247,7 +259,10 @@ The complex inverted matrix is needed as input to solve the above matrix equatio
  
 $$\begin{array}{l}a(x,y) = C_1 \\
 b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
-\Phi(x,y)=atan2\left( \frac{Im(C_2)}{Re(C_2)} - (2\pi x)/T_x -(2\pi y)/T_y \right)\end{array}$$
+\Phi(x,y)=atan2\left( \frac{Im(C_2)}{Re(C_2)} - (2\pi x)/T_x -(2\pi y)/T_y \right)\\
+\end{array}$$
+ 
+ 
  
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
