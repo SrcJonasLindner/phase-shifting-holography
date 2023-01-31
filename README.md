@@ -260,8 +260,6 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 \Phi(x,y)=atan2\left( \frac{Im(C_2)}{Re(C_2)} - (2\pi x)/T_x -(2\pi y)/T_y \right)\\
 \end{array}$$
  
- 
- 
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
  The goodness of fit $R^2$ (and the adj. $R^2$) can be calculated by [R_sq_adj_from_ReconPS_Holo.s]() via: 
@@ -269,6 +267,13 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  $$
  R^2=1-\left(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  \right)
  $$
+ 
+ Amplitude $A(x,y)$ and phase $\Phi(x,y)$ of the exit wavefunction with respect to the reference can be calculated by<br>
+ 
+ $$\begin{array}
+ A(x,y) &= \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
+\Phi(x,y)&= \tan^{-1}⁡\left( \Phi(x,y)-\Phi_{ref}(x,y)\right)
+ \end{array}$$
  
  
   ### Measure the carrier frequency phase
