@@ -143,7 +143,7 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
 The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s](#) .
 Its purpose is to create a custom mask in reciprocal space. This custom mask can constist of combinations of spot- and radial masks to focus the drift correction onto the relevant spatial frequencies. After the mask is constructed with the user interface, it can be applied to the image stack and the drift calculated via cross correaltion or phase correlation function. The drift vector is returned in form of an image, that can be applied to stacks. <br>
 
-The specimen drift correction scheme is proposed in the [publication]() and an [example workflow](#example-data-and-workflow) is given below. 
+The specimen drift correction scheme is proposed in the [publication]() and an [example workflow](#example-data-and-workflow) is given below. We have decided to not fully automize the drift correction, since the output of each step should be checked carefully. The quality of the drift correction can be very sensitive to the chosen filter conditions.   
 <br>
 
 <details>
