@@ -140,8 +140,8 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/DriftCorrUI.png">
 </div>
-The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s]().
-Its purpose is to create a custom mask in reciprocal space. This custom mask can constist of combinations of spot- and radial masks to focus the drift correction of the relevant spatial frequencies. After the mask is constructed iwth the user interface it can be applied to the image stack and the drift calculated via cross correaltion or phase correlation function. The drift vector is returned in form of an image, that can be applied to stacks. <br>
+The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s](#) .
+Its purpose is to create a custom mask in reciprocal space. This custom mask can constist of combinations of spot- and radial masks to focus the drift correction onto the relevant spatial frequencies. After the mask is constructed with the user interface, it can be applied to the image stack and the drift calculated via cross correaltion or phase correlation function. The drift vector is returned in form of an image, that can be applied to stacks. <br>
 
 The specimen drift correction scheme is proposed in the [publication]() and an [example workflow](#example-data-and-workflow) is given below. 
 <br>
@@ -178,7 +178,7 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
 <details>
  <summary>Holography</summary>
  
- <kbd>Sideband</kbd>: Removes the most intense bragg peaks inside the sideband. The number of peaks to remove is given as user input dialog.<br>
+ <kbd>Sideband</kbd>: Removes the most intense bragg peaks inside the sideband. The number of peaks to remove is user input<br> &emsp;&emsp;&emsp;&emsp;dialog.<br>
  <kbd>Fresnel</kbd>: Not fully implemented yet. Should use a gausssian line filter to mask the fresel streak.<br>
     
 </details>
@@ -187,19 +187,19 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
 <details>
  <summary>Measure</summary>
  
- <kbd>XCF</kbd>: .<br>
- <kbd>PCF</kbd>: .<br><br>
- [&check;] Pairwise: <br><br> 
-  <kbd>Max X</kbd>: .<br>
-  <kbd>Max Y</kbd>: .<br>
+ <kbd>XCF</kbd>: Use the Cross correlation function (XCF) to calculate the drift for the active reciprocal mask image and the<br> &emsp;&emsp; acitve image cube.<br>
+ <kbd>PCF</kbd>: Use the Phase correlation function ([PCF](https://doi.org/10.1016/S0304-3991(02)00071-2)) to calculate the drift for the active reciprocal mask image and the<br> &emsp;&emsp; acitve image cube..<br><br>
+ [&check;] Pairwise: If checked, the drift vector calculated by <kbd>XCF</kbd> or <kbd>PCF</kbd> uses the predecessing image of the cube.<br>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;If unchecked, the first image of the series is used insted.<br><br> 
+  <kbd>Max X</kbd>: Maximum drift vector component $x$ of a applied drift series. Useful for new Field of view.<br>
+  <kbd>Max Y</kbd>: Maximum drift vector component $y$ of a applied drift series. Useful for new Field of view.<br>
     
 </details>
 
 <details>
  <summary>Drift Sequence</summary>
  
- <kbd>Load</kbd>: .<br>
- <kbd>Apply</kbd>: .<br>
+ <kbd>Load</kbd>:Loads a drift vector image created with <kbd>XCF</kbd> or <kbd>PCF</kbd>.<br>
+ <kbd>Apply</kbd>:Applies a drift vector image created with <kbd>XCF</kbd> or <kbd>PCF</kbd> to the active image cube.<br>
     
 </details>      
   
@@ -249,9 +249,7 @@ v_3
 
 Calculating $\underline{\underline{M}}^{-1}$ is done in the [reconstruction Matrix](#reconstruction-matrix) section via a digital micrograph script with an embedded python routine.  
 
-The complex inverted matrix is needed as input to solve the above matrix equation by calculating $\underline{\underline{M}}^{-1}\cdo\vec{v}$ within the [reconstruction Image](#reconstruction-image) step.
- 
- Within our publication we use the following intensity notation for the series:
+The complex inverted matrix is needed as input to solve the above matrix equation by calculating $\underline{\underline{M}}^{-1}\cdot \vec{v}$ within the [reconstruction Image](#reconstruction-image) step. Within our publication we use the following intensity notation for the series:
  
  $$I(x,y,n) = a(x,y) + b(x,y) \cos\[(2\pi x)/T_x + (2\pi y)/T_y +\Phi + \phi_n  ]$$
  
