@@ -249,7 +249,7 @@ v_3
 
 Calculating $\underline{\underline{M}}^{-1}$ is done in the [reconstruction Matrix](#reconstruction-matrix) section via a digital micrograph script with an embedded python routine.  
 
-The complex inverted matrix is needed as input to solve the above matrix equation by calculating $$\underline{\underline{M}}^{-1}\cdo\vec{v}$ within the [reconstruction Image](#reconstruction-image) step.
+The complex inverted matrix is needed as input to solve the above matrix equation by calculating $\underline{\underline{M}}^{-1}\cdo\vec{v}$ within the [reconstruction Image](#reconstruction-image) step.
  
  Within our publication we use the following intensity notation for the series:
  
