@@ -335,7 +335,6 @@ An example-data of an phase shifting electron holography data set can be downloa
 Example workflow start: <br>
 
 1. 
-
 ---
 # Copyright and Disclaimer
 
