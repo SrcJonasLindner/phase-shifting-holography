@@ -323,7 +323,7 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
  
  $$\begin{array}{l}
  \text{A}(x,y) = \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
-\Phi(x,y)= \tan^{-1}⁡\left( \Phi(x,y)-\Phi_{ref}(x,y)\right)
+\Phi(x,y)=  \Phi(x,y)-\Phi_{ref}(x,y)
  \end{array}$$
  
  
