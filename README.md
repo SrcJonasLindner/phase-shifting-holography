@@ -25,7 +25,8 @@ Software package collecting scripts for the data collection and evaluation of ph
 
   ## Digital Micrograph 3.5X+ with Python support installed
   
-  Install the latest version [Digital Micrograph](https://www.gatan.com/installation-instructions) version
+  Install the latest version [Digital Micrograph](https://www.gatan.com/installation-instructions). 
+  Install the [FAUX camera libary](http://www.dmscripting.com/faux_camera_library.html).
   
   ## Software Microscope control to lenses (optional, but strongly recommended)
   The phase shifting measurement procedure involes a routine to use the GunTilt lens of the Titan to tilt the beam off from the optical axis to create phase    shifts in the holograms, that are the heart of this method. In our implementation is a [default option](http://www.dmscripting.com/tem_control.html) using the Digital Micrograph Microscope interface, but with our Microscope (Thrmofisher Titan) this procedure was way too slow and needed approx 1-2 seconds to create one of the beam tilts. Since a phase shifting holo series covers around several tens of images, the specimen driftin the dead time is a serious problem. But maybe the delay is shorter on other instruments. The relevant portion of the script could be replaced with low efford. 
