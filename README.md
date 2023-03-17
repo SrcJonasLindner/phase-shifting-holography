@@ -1,6 +1,6 @@
 # Phase-shifting-holography software package
 
-Note: This page is currently under construction and should be finished once the paper is accepted.
+Note: This page is currently under construction and should be finished soon.
 
 [![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2022.113629)
 
