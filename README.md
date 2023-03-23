@@ -112,7 +112,7 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
 
 <details>
   <summary> Wobbler-Calibration Input Example (250V biprsim)</summary>
- ```
+<pre><code>
     Wobbler-Calibration Input Example (250V biprsim): 
     
     Acquire:
@@ -126,7 +126,7 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
          Stop=25.0
          Step=1.0
  press Wobble Button
- ```
+</code></pre>
 </details>
     
 <details>
