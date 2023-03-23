@@ -325,7 +325,7 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
  Amplitude $A(x,y)$ and phase $\Phi(x,y)$ of the exit wavefunction with respect to the reference can be calculated from the reconstructed images by<br>
  
  $$\begin{array}{l}
- \text{A}(x,y)/ \text{A}_{ref}(x,y) = \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
+ \text{A}(x,y)/ \text{A}$_{ref}$(x,y) = \sqrt{\frac{a(x,y)}{(a_{ref} (x,y)/2}-1}\\
 \Phi(x,y)=  \Phi(x,y)-\Phi_{ref}(x,y)
  \end{array}$$
  
