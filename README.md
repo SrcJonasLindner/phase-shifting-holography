@@ -114,8 +114,7 @@ If the standard derivation of each image is plotted against the $\phi_{max}$ or 
   <summary> Wobbler-Calibration Input Example (250V biprsim)</summary>
 <pre><code>
     Wobbler-Calibration Input Example (250V biprsim): 
-    
-    <kbd>Acquire</kbd>:
+    Acquire:Start
         Samples=4.0
     Angle [deg]: 
         Start=90 # choose fix angle along holder axis
