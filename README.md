@@ -2,7 +2,9 @@
 
 Note: This page is currently under construction and should be finished soon.
 
-Application of phase-shifting off-axis electron holography to the reconstruction of Ångstrøm resolution exit-waves via drift correction
+Reconstruction of Ångstrøm resolution exit-waves by the application of drift-corrected phase-shifting off-axis electron holography
+
+(dummy header:)
 [![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2022.113629)
 
 Software package including scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
