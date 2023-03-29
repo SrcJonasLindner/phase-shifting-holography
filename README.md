@@ -208,7 +208,7 @@ The specimen drift correction scheme is proposed in the [publication]() and an [
  
  <kbd>XCF</kbd>: Use the Cross correlation function (XCF) to calculate the drift for the active reciprocal mask image and the<br> &emsp;&emsp; acitve image cube.<br>
  <kbd>PCF</kbd>: Use the Phase correlation function ([PCF](https://doi.org/10.1016/S0304-3991(02)00071-2)) to calculate the drift for the active reciprocal mask image and the<br> &emsp;&emsp; acitve image cube..<br><br>
- [&check;] Pairwise: If checked, the drift vector calculated by <kbd>XCF</kbd> or <kbd>PCF</kbd> uses the predecessing image of the cube.<br>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;If unchecked, the first image of the series is used insted.<br><br> 
+ [&check;] Pairwise: If checked, the drift vector calculated by <kbd>XCF</kbd> or <kbd>PCF</kbd> uses the predecessing image of the cube.<br>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;If unchecked, the first image of the series is used insted as ankor  for all images.<br><br> 
   <kbd>Max X</kbd>: Maximum drift vector component $x$ of a applied drift series. Useful for new Field of view.<br>
   <kbd>Max Y</kbd>: Maximum drift vector component $y$ of a applied drift series. Useful for new Field of view.<br>
     
