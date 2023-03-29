@@ -1,13 +1,24 @@
 # Phase-shifting-holography software package
 
+Software package including scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
+
 Note: This page is currently under construction and should be finished soon.
 
-Reconstruction of Ångstrøm resolution exit-waves by the application of drift-corrected phase-shifting off-axis electron holography
+[![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.48550/arXiv.2303.16054)
 
-(dummy header:)
-[![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2022.113629)
-
-Software package including scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
+---
+# Abstract
+Phase-shifting electron holography is an excellent method to reveal electron wave phase information with
+very high phase sensitivity over a large range of spatial frequencies. It circumvents the limiting trade-off
+between fringe spacing and visibility of standard off-axis holography. Previous implementations have been
+limited by the independent drift of biprism and sample. We demonstrate here an advanced drift correction
+scheme for the hologram series that allow to obtain reliable phase information at the 1 Å information limit
+of the used Titan 80-300 kV environmental transmission electron microscope using a single biprism at
+moderate voltage of 250 V. The obtained phase and amplitude information is validated at a thin Pt sample
+by use of multislice image simulation with the frozen lattice approximation and shows excellent agreement.
+The presented method drastically reduces the hardware requirements and thus allows to achieve high
+resolution in off-axis holography in various instruments including those for in-situ applications. A software
+implementation for the acquisition, calibration and reconstruction is provided.
 
 --- 
 **Table of contents:**
