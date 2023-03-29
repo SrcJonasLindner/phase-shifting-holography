@@ -7,7 +7,7 @@ Note: This page is currently under construction and should be finished soon.
 [![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.48550/arXiv.2303.16054)
 
 ---
-## Paperabstract
+## Paper abstract
 Phase-shifting electron holography is an excellent method to reveal electron wave phase information with
 very high phase sensitivity over a large range of spatial frequencies. It circumvents the limiting trade-off
 between fringe spacing and visibility of standard off-axis holography. Previous implementations have been
@@ -21,7 +21,7 @@ resolution in off-axis holography in various instruments including those for in-
 implementation for the acquisition, calibration and reconstruction is provided.
 
 --- 
-**Table of contents:**
+#**Table of contents:**
 
 1. [Requirements](#requirements)
 1. [Data Collection](#data-collection) <br>
