@@ -288,7 +288,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  $$
 
   ### Measure the carrier frequency phase
-  [TiltSeriesUI.s]()<br>
+  [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s)<br>
   <b>Input:</b> <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
   <b>Output:</b> <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
