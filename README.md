@@ -281,7 +281,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
- The goodness of fit $R^2$ (and the adj. $R^2$) can be calculated by [R_sq_adj_from_ReconPS_Holo.s]() via: 
+ The goodness of fit $R^2$ (and the adj. $R^2$) can be calculated by [R_sq_adj_from_ReconPS_Holo.s](src/data_evaluation/reconstruction/R_sq_adj_from_ReconPS_Holo.s) via: 
  
  $$
  R^2=1-\left(\frac{\sum_{n} \[ I_i(x,y)-\hat{I}_i(x,i)\]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  \right)
@@ -292,7 +292,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
   <b>Input:</b> <ul><li>Phase shifting hologram series as 3D image cube</li></ul>
   <b>Output:</b> <ul><li>1D image containing the $\phi_n$ of each hologram</li> </ul>
   
- The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](). The resulting line profile will be used as input for the next step. 
+ The phase shift $\phi_n$ of the hologram carrier frequency of each hologram has to be measured by the <kbd>Measure stack</kbd> of [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s). The resulting line profile will be used as input for the next step. 
   
   
   
