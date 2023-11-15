@@ -1,0 +1,11 @@
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repo to Dataverse 
+        uses: IQSS/dataverse-uploader@v1.4
+        with:
+          DATAVERSE_TOKEN: ${{secrets.DATAVERSE_TOKEN}}
+          DATAVERSE_SERVER: https://data.goettingen-research-online.de/dataverse/phase-shifting-holography
+          DATAVERSE_DATASET_DOI:  doi:10.25625/BWHIHA
