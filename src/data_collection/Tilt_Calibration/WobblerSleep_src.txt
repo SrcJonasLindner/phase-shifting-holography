@@ -1,0 +1,196 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include "Shlwapi.h" // Needs to link  shlwapi.lib in Linker Config!
+#define _USE_MATH_DEFINES
+#include <math.h>
+#include <ctime>
+
+void TCharToChar(const wchar_t* Src, char* Dest, int Size)
+{
+WideCharToMultiByte(CP_ACP, 0, Src, wcslen(Src)+1, Dest , Size, NULL, NULL);
+}
+
+void WaitUntilPassed(int millisecs, clock_t startClock){
+    long secondsAhead = millisecs * CLOCKS_PER_SEC / 1000.0;
+    // do nothing until the elapsed time has passed.
+    while(clock() < startClock+secondsAhead);
+    return;
+}
+
+/* Wobbler
+input(rate,angle, amp,cycle=n/-1 for infinity);
+
+output(samples*time/cycle)*/
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	// parse command line parameters
+	
+	if (argc!=6){std::cout << "Expetected command line parameters: rate, angle [rad] , amplitude, num_cyc \n!"; system("pause"); return -1;}
+
+	char dblBuf[10];
+	TCharToChar(argv[1], dblBuf, sizeof(dblBuf));
+
+	int rate= atoi(dblBuf);
+	//std::cout << "unsing rate:  " << rate << "\n";
+	if (rate<=0){std::cout << "Out of Range Exception: rate >0!\n"; system("pause"); return -1;}
+
+	TCharToChar(argv[2], dblBuf, sizeof(dblBuf));
+	double angle= atof(dblBuf);
+	//std::cout << "angle [deg]:  " << angle/180.0*M_PI << "\n";
+
+	TCharToChar(argv[3], dblBuf, sizeof(dblBuf));
+	double amp= atof(dblBuf);
+	//std::cout << "amp:  " << amp << "\n";
+
+	if (abs(amp) >1.0){std::cout << "Out of Range Exception: amp [-1,1]!\n"; system("pause"); return -1;}
+	
+	TCharToChar(argv[4], dblBuf, sizeof(dblBuf));
+	int num_cycles= atoi(dblBuf);
+	//std::cout << "number of cycles:  " << num_cycles << "\n";
+
+	TCharToChar(argv[5], dblBuf, sizeof(dblBuf));
+	int sleep= atoi(dblBuf);
+	
+	double step=amp/rate;
+
+	// Setup virtual Microscope
+
+	if (!AfxOleInit()){
+		std::cout << "idp_ole_init_failed \n";
+		std::cout <<"Error Code: -5 idp_ole_init_failed \n";
+		//ErrorHandler(-5, eventID, comPath);
+		return -1;
+	}
+
+	HRESULT in;
+	in = CoInitializeEx(0, COINIT_MULTITHREADED); 
+	if (FAILED(in)) 
+	{
+		std::cout << "Failed to initialize COM library. Error code = 0x" << in << "\n";
+		std::cout <<  "Failed to initialize COM library. Error code = 0xin";
+		//ErrorHandler(-6, eventID, comPath);
+		system("pause");
+		return in;
+	}
+
+	HRESULT sc = ::CoInitializeSecurity(
+		NULL,
+		-1,
+		NULL,
+		NULL,
+		RPC_C_AUTHN_LEVEL_NONE,
+		RPC_C_IMP_LEVEL_IMPERSONATE,
+		NULL,
+		EOAC_NONE,
+		NULL);
+		
+	if (FAILED(sc)) 
+	{
+		TRACE1("CoInitializeSecurity failed! (returned 0x%X)\nno remote events will be received", sc);
+		std::cout << "CoInitializeSecurity failed! (returned 0xsc)\nno remote events will be received";
+		//ErrorHandler(-7, eventID, comPath);
+		system("pause");
+		return sc;
+	}
+	//std::cout << "hr result sc: " << sc << "\n";
+
+	InstrumentInterfacePtr MyInstrument;
+	
+	HRESULT hr;
+	hr = MyInstrument.CreateInstance(_T("TEMScripting.Instrument.1"));
+	
+	GunPtr MyGun = MyInstrument->Gun;
+
+	VectorPtr oldTilt = MyGun->Tilt;
+	double old_x=oldTilt->X;
+	double old_y=oldTilt->Y;
+
+	VectorPtr newTilt = MyGun->Tilt;
+	newTilt->X=old_x;
+	newTilt->Y=old_y;
+
+	if (MyInstrument->Illumination->BeamBlanked==true){
+		std::cout << "Error: Beam was blanked!\n Exit\n"; 
+		system("pause");
+		return -1;
+	}
+
+	DWORD t_start;
+	DWORD t_end;
+
+
+
+/////// the ramp
+
+	// cycle for
+	double mean=0.0;
+	t_start=GetTickCount(); 
+	for (int i=1; i<=num_cycles; i++){
+		
+
+		// one period of sawtooth:
+		try{
+			for (double curr_amp=0.0; curr_amp<=amp; curr_amp+=step ){
+					//std::cout<< "curr_amp= " << curr_amp << "\n";
+					clock_t startClock = clock();
+    
+					
+
+					VectorPtr newTilt = MyGun->Tilt;
+					newTilt->X=old_x+curr_amp*cos(angle);
+					newTilt->Y=old_y+curr_amp*sin(angle);
+					
+					MyGun->Tilt=newTilt;
+					
+					WaitUntilPassed(sleep,startClock);
+					//std::cout<< "curr_amp= " << curr_amp << "\n";
+					
+
+			}
+
+			for (double curr_amp=amp-step; curr_amp>0; curr_amp-=step ){
+
+					clock_t startClock = clock();
+    
+					//std::cout<< "curr_amp= " << curr_amp << "\n";
+
+					VectorPtr newTilt = MyGun->Tilt;
+					newTilt->X=old_x+curr_amp*cos(angle);
+					newTilt->Y=old_y+curr_amp*sin(angle);
+					
+					MyGun->Tilt=newTilt;
+
+					WaitUntilPassed(sleep,startClock);
+			}
+		}
+		catch (...){
+					std::cout << "gun tilt failed!\n";
+					system("pause");
+					return -1;
+				}
+		
+		
+		
+	}
+	t_end=GetTickCount();
+	mean= (t_end-t_start)/ 1000.0;
+
+	//std::cout << "Wobbling finished!\n";
+	//std::cout << "rate:  " << rate << "\n";
+	//std::cout << "angle [deg]:  " << angle/180.0*M_PI << "\n";
+	//std::cout << "number of cycles:  " << num_cycles << "\n";
+	//std::cout << "amp:  " << amp << "\n";
+
+	//std::cout << "total running time: " << mean << "\n";
+	mean/=num_cycles;
+	//std::cout << "mean saw tooth period: " << mean <<"\n" ;
+	
+	//system("pause");
+	return 1000*mean;
+	
+}
+
+

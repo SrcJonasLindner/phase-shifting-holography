@@ -1,0 +1,94 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include "Shlwapi.h" // Needs to link  shlwapi.lib in Linker Config!
+
+
+void TCharToChar(const wchar_t* Src, char* Dest, int Size)
+{
+WideCharToMultiByte(CP_ACP, 0, Src, wcslen(Src)+1, Dest , Size, NULL, NULL);
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	// parse command line parameters
+	// first par: factor to multiply the dac-value of the beam tilt
+	// second: chosen coordinate to read;
+	if (argc!=3){std::cout << "Expetected command line parameters: x mult, y_mult [-1,1]\n!"; system("pause"); return 1;}
+
+	char dblBuf[10];
+	TCharToChar(argv[1], dblBuf, sizeof(dblBuf));
+
+	double mult= atof(dblBuf);
+	//std::cout << "inline x:  " << tilt_x << "\n";
+	
+	TCharToChar(argv[2], dblBuf, sizeof(dblBuf));
+
+	double coord= atof(dblBuf);
+	//std::cout << "inline y:  " << tilt_y << "\n";
+	
+	// Setup virtual Microscope
+
+	if (!AfxOleInit()){
+		std::cout << "idp_ole_init_failed \n";
+		std::cout <<"Error Code: -5 idp_ole_init_failed \n";
+		//ErrorHandler(-5, eventID, comPath);
+		return -3;
+	}
+
+	HRESULT in;
+	in = CoInitializeEx(0, COINIT_MULTITHREADED); 
+	if (FAILED(in)) 
+	{
+		std::cout << "Failed to initialize COM library. Error code = 0x" << in << "\n";
+		std::cout <<  "Failed to initialize COM library. Error code = 0xin";
+		//ErrorHandler(-6, eventID, comPath);
+		system("pause");
+		return in;
+	}
+
+	HRESULT sc = ::CoInitializeSecurity(
+		NULL,
+		-1,
+		NULL,
+		NULL,
+		RPC_C_AUTHN_LEVEL_NONE,
+		RPC_C_IMP_LEVEL_IMPERSONATE,
+		NULL,
+		EOAC_NONE,
+		NULL);
+		
+	if (FAILED(sc)) 
+	{
+		TRACE1("CoInitializeSecurity failed! (returned 0x%X)\nno remote events will be received", sc);
+		std::cout << "CoInitializeSecurity failed! (returned 0xsc)\nno remote events will be received";
+		//ErrorHandler(-7, eventID, comPath);
+		system("pause");
+		return -4;
+	}
+	//std::cout << "hr result sc: " << sc << "\n";
+
+	InstrumentInterfacePtr MyInstrument;
+	
+	HRESULT hr;
+	hr = MyInstrument.CreateInstance(_T("TEMScripting.Instrument.1"));
+	
+	ProjectionPtr MyProj = MyInstrument->Projection;
+
+	VectorPtr MyShift = MyProj->ImageShift;
+	double tilt_x= MyShift->X;
+	double tilt_y= MyShift->Y;
+
+	int val=0;
+	if (coord==0 && tilt_x<0){val= (int) mult;}
+	if (tilt_y<0 && coord!=0){val= (int) mult;}
+	
+
+	if (coord== 0) return abs(tilt_x)*mult+val;
+	else return abs(tilt_y)*mult+val;
+	
+}
+
+

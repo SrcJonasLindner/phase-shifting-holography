@@ -1,0 +1,106 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+#include <stdlib.h>
+#include "Shlwapi.h" // Needs to link  shlwapi.lib in Linker Config!
+
+
+void TCharToChar(const wchar_t* Src, char* Dest, int Size)
+{
+WideCharToMultiByte(CP_ACP, 0, Src, wcslen(Src)+1, Dest , Size, NULL, NULL);
+}
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	// parse command line parameters
+	
+	if (argc!=3){std::cout << "Expetected command line parameters: x_tilt, y_tilt [-1,1]\n!"; system("pause"); return -1;}
+
+	char dblBuf[10];
+	TCharToChar(argv[1], dblBuf, sizeof(dblBuf));
+
+	double tilt_x= atof(dblBuf);
+	//std::cout << "inline x:  " << tilt_x << "\n";
+	
+	TCharToChar(argv[2], dblBuf, sizeof(dblBuf));
+
+	double tilt_y= atof(dblBuf);
+	//std::cout << "inline y:  " << tilt_y << "\n";
+
+	if (abs(tilt_x) >1.0 || abs(tilt_y) >1.0){std::cout << "Out of Range Exception: x_tilt, y_tilt [-1,1]!\n"; system("pause"); return -1;}
+
+	// Setup virtual Microscope
+
+	if (!AfxOleInit()){
+		std::cout << "idp_ole_init_failed \n";
+		std::cout <<"Error Code: -5 idp_ole_init_failed \n";
+		//ErrorHandler(-5, eventID, comPath);
+		return -1;
+	}
+
+	HRESULT in;
+	in = CoInitializeEx(0, COINIT_MULTITHREADED); 
+	if (FAILED(in)) 
+	{
+		std::cout << "Failed to initialize COM library. Error code = 0x" << in << "\n";
+		std::cout <<  "Failed to initialize COM library. Error code = 0xin";
+		//ErrorHandler(-6, eventID, comPath);
+		system("pause");
+		return in;
+	}
+
+	HRESULT sc = ::CoInitializeSecurity(
+		NULL,
+		-1,
+		NULL,
+		NULL,
+		RPC_C_AUTHN_LEVEL_NONE,
+		RPC_C_IMP_LEVEL_IMPERSONATE,
+		NULL,
+		EOAC_NONE,
+		NULL);
+		
+	if (FAILED(sc)) 
+	{
+		TRACE1("CoInitializeSecurity failed! (returned 0x%X)\nno remote events will be received", sc);
+		std::cout << "CoInitializeSecurity failed! (returned 0xsc)\nno remote events will be received";
+		//ErrorHandler(-7, eventID, comPath);
+		system("pause");
+		return sc;
+	}
+	//std::cout << "hr result sc: " << sc << "\n";
+
+	InstrumentInterfacePtr MyInstrument;
+	
+	HRESULT hr;
+	hr = MyInstrument.CreateInstance(_T("TEMScripting.Instrument.1"));
+	
+	GunPtr MyGun = MyInstrument->Gun;
+
+	VectorPtr newTilt = MyGun->Tilt;
+	newTilt->X=tilt_x;
+	newTilt->Y=tilt_y;
+
+	// setting gun tilt is only possible if beam unblanked;
+	try{
+		if (MyInstrument->Illumination->BeamBlanked==true){
+			std::cout << "Error: Beam was blanked!\n Exit\n"; 
+			system("pause");
+			return -1;
+		}
+		else{
+			MyGun->Tilt=newTilt;
+		}
+	}
+	
+	catch (...) {
+		std::cout << "setting tilt failed!\n";
+		system("pause");
+		return -1;
+	}
+	//system("pause");
+	return 0;
+}
+
+
