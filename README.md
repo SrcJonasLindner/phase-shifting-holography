@@ -286,7 +286,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
  The goodness of fit $R^2$ (and the adj. $R^2$) can be calculated by [R_sq_adj_from_ReconPS_Holo.s](src/data_evaluation/reconstruction/R_sq_adj_from_ReconPS_Holo.s) via: 
  
  ```math
- R^2=1-\left(\frac{\sum_{n} \left[ I_i(x,y)-\hat{I}_i(x,i)\right]^2}  {\sum_{n} \[ I_i(x,y)-\< \hat{I}_i(x,i)\> \]^2}  \right)
+ R^2=1-\left(\frac{\sum_{n} \left[ I_i(x,y)-\hat{I}_i(x,i)\right]^2}  {\sum_{n} \left[ I_i(x,y)-\left< \hat{I}_i(x,i)\right> \right]^2}  \right)
  ```
 
   ### Measure the carrier frequency phase
