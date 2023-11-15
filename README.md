@@ -161,7 +161,7 @@ The subroutine to do a Wobbler-Calibration is found in the [Tilt_Calibration](sr
 
  ## Specimen drift correction
 
-The main tool for the specimen drift correction is the digital micrograph script [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s).
+The main tool for the specimen drift correction is the digital micrograph script [DriftCorrUI.s](src/data_evaluation/drift_corr/DriftCorrUIv1p0.s).
  
 <div class="content">
   <img align="right" src="https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/DriftCorrUI.png">
