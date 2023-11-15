@@ -9,3 +9,5 @@ jobs:
           DATAVERSE_TOKEN: ${{secrets.GRO_DATA_TOKEN}}
           DATAVERSE_SERVER: https://data.goettingen-research-online.de/dataverse/phase-shifting-holography
           DATAVERSE_DATASET_DOI:  doi:10.25625/BWHIHA
+          DELETE: True
+          PUBLISH: True
