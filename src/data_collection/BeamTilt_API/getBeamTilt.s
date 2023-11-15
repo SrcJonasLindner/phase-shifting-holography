@@ -30,6 +30,6 @@ y/=factor;
 
 {
  number x=0,y=0 // will hold the current beam tilt as float
- getBeamTilt(x,y,9) // 
+ getBeamTilt(x,y,9) /
  result("tilt:" + x + " , " + y +"\n");
 }
