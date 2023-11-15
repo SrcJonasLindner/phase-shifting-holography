@@ -4,7 +4,7 @@ Software package including scripts for the data collection and evaluation of pha
 
 Note: This page is currently under construction and should be finished soon.
 
-[![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)]([[https://doi.org/10.48550/arXiv.2303.16054](https://doi.org/10.1016/j.ultramic.2023.113880)](https://doi.org/10.1016/j.ultramic.2023.113880))
+[![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2023.113880)
 
 ---
 ## Paper abstract
