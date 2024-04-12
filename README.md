@@ -337,7 +337,7 @@ We have implemented the Taylor series reonstruction as digital Micrograph script
 <li>1D image containing the $\phi_n$ of each hologram</li>
 <li>Drift corrected 3D image cube containing the phase shifting series</li>
 <li>Two 3x3 pixel images containing the real- and imaginary part of the corresponding inverted matrix</li>
-<li>Two float number $T_x$ $T_y$ the fringe spacing in pixels in x- and y direction. Note that their sign depends on the choice of the side band maximum to calculate the phase shift. And may have to be adapted. By default we assume, that the one that is used is in the upper left quadrant. If it is located in the upper right quadrant, flip the sign of $T_x$. </li>    
+<li>Two float number $T_x$ $T_y$ the fringe spacing in pixels in x- and y direction. Note that their sign depends on the choice of the side band maximum to calculate the phase shift. And may have to be adapted. By default (both positive) we assume, that the one that is used is in the upper left quadrant. If it is located in the upper right quadrant, flip the sign of $T_x$. </li>    
 </ul>
 <b>Output:</b> <ul>
 <li>background constrast image a(x,y) </li>
