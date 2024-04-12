@@ -285,8 +285,9 @@ $$\begin{array}{l}a(x,y) = C_1 \\
 b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 \Phi(x,y)=atan2\left( \frac{Im(C_2)}{Re(C_2)} \mp (2\pi x)/T_x \mp (2\pi y)/T_y \right)\\
 \end{array}$$
+
  Note that the direction of the sign of $T_x$ and $T_y$ depends on the choice of the side band, that is used to calculate the phase ramp. Depending on the data the appropiate signs have to be used here. 
- The measure function of [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s) uses the side band located in the upper two quadrant. The  
+ The measure function of [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s) uses the side band located in the upper two quadrant.  
  
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
