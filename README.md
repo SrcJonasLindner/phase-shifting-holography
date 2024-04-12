@@ -109,7 +109,7 @@ All API-functions to manipulate the electron beam are located in [BeamTilt_API](
   <summary>Evaluate</summary>
     
 <kbd>Drift</kbd>: Uses the [phase correlation function](https://doi.org/10.1016/S0304-3991(02)00071-2) to roughly calculate the specimen drift  of the<br>&emsp;&emsp;&emsp;&nbsp; frontwindow <br>&emsp;&emsp;&emsp;&nbsp;image stack.<br>
-<kbd>Measure stack</kbd>: Measures the hologram phase of the carrier frequency from the FFT of each hologram inside the frontmost stack. The result is provided as line profile, that is used as input for the [reconstruction](#phase-shifting-series-reconstruction).  <br>
+<kbd>Measure stack</kbd>: Measures the hologram phase of the carrier frequency from the FFT of each hologram inside the frontmost stack.  The output is an image. In the current version a horizontal line profile about the third line is the phase. Detials are found in the image info tag. Once the result is provided as line profile, that is used as input for the [reconstruction](#phase-shifting-series-reconstruction).  <br>
 <kbd>Correct</kbd>: Corrects the tilt series image stack by the drift determined by <kbd>Drift</kbd>.<br>
 <kbd>Refine</kbd>: Beta feature that measures the phase of the holograms by non-linear cosine fitting via python.<br>&emsp;&emsp;&emsp;&nbsp; Not recommended, use <kbd>Measure stack</kbd> insted.<br>
     
