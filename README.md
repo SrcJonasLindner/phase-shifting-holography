@@ -287,7 +287,7 @@ b(x,y) = 2\sqrt{C_1 \cdot C_2} \\
 \end{array}$$
 
  Note that the direction of the sign of $T_x$ and $T_y$ depends on the choice of the side band, that is used to calculate the phase ramp. Depending on the data the appropiate signs have to be used here. 
- The measure function of [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s) uses the side band located in the upper two quadrant.  
+ The measure function of [TiltSeriesUI.s](src/data_collection/Tilt_Series_UI_v1p0.s) uses the side band located in the upper two quadrants.  
  
  After the matrix reconstruction process the fitted parameters $C_1$, $C_2$ and $C_3$ can be used to  calculate the intensity $\hat{I}(n)$, that is predicted by  the least squares model for each hologram of the series and the input phase values $\phi_n$ used for the reconstruction.
  
