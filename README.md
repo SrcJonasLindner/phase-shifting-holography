@@ -2,7 +2,7 @@
 
 Software package including scripts for the data collection and evaluation of phase shifting holography image stacks with Digital Micrograph Scripting and TitanScripting for electron microscopy.
 
-Note: This page is currently under construction and should be finished soon.
+Note: The workflow and the trainingsdata have not been published (yet). If you are interested please contanct me or the corresponding author of the publication directly.
 
 [![Phase Shifting Paper](https://github.com/SrcJonasLindner/phase-shifting-holography/blob/main/doc_images/PaperHeader.png)](https://doi.org/10.1016/j.ultramic.2023.113880)
 
