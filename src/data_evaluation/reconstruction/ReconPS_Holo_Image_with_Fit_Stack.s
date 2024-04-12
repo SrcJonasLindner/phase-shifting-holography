@@ -11,7 +11,7 @@
 	 Ty=18.79    // fringe period in y direction [px] Use the same parameters for ref. reconstruction.
 
 	//Note that the sign of Tx and Ty depends on the choice of the side band maximum to calculate the phase shift. And may have to be adapted. 
- 	//By default we assume, that the one that is used is in the upper left quadrant. 
+ 	//By default (both positive) we assume, that the one that is used is in the upper left quadrant. 
  	//If it is located in the upper right quadrant, flip the sign of $T_x$.
   
    ### Outputs:
